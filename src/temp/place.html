@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Helyszínek</title>
+
+         
+      <!-- 
+      - favicon
+      -->
+      <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+
+      <!-- font awesome file link  ez az ikonokat hozza be-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+      <!-- 
+      - google font link
+      -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+      <!-- 
+      - custom css link
+      -->
+      <link rel="stylesheet" href="../css/helyszinek.css">
+
+      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+</head>
+<body id="place">
+
+      
+      <!-- 
+      - #PRELOADER
+      -->
+
+      <div class="preload" data-preaload>
+            <div class="circle"></div>
+            <p class="text">Tóth Gabriella</p>
+      </div>
+  
+  
+  
+  
+  
+      <!-- 
+      - #TOP BAR
+      -->
+  
+      <div class="topbar">
+            <div class="container">
+      
+            <address class="topbar-item">
+            <div class="icon">
+                  <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+            </div>
+      
+            <span class="span">
+                  1223 Budapest, Platina utca 1/1
+            </span>
+            </address>
+      
+            <div class="separator"></div>
+
+            <address class="topbar-item">
+                  <div class="icon">
+                    <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+                  </div>
+          
+                  <span class="span">
+                    1142 Budapest, Dorozsmai utca 110.
+                  </span>
+                </address>
+      
+            <div class="topbar-item item-2">
+            <!--<div class="icon">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+            </div>-->
+      
+            <span class="span"></span>
+            </div>
+      
+            <a href="tel:+36705764224" class="topbar-item link">
+            <div class="icon">
+                  <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
+            </div>
+      
+            <span class="span">+36 70 576 4224</span>
+            </a>
+      
+            <div class="separator"></div>
+      
+            <a href="mailto:info@tothgabriella.hu" class="topbar-item link">
+            <div class="icon">
+                  <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+      
+            <span class="span">info@tothgabriella.hu</span>
+            </a>
+      
+            </div>
+      </div>
+  
+  
+    <!-- 
+      - #HEADER
+    -->
+  
+      <header class="header" data-header>
+            <div class="container">
+      
+            <a href="#" class="logo">
+            <img src="../images/Tóth Gabriella.svg" width="300" height="50" alt="TothGabriella - Home">
+            </a>
+      
+            <nav class="navbar" data-navbar>
+      
+            <button class="close-btn" aria-label="close menu" data-nav-toggler>
+                  <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+            </button>
+      
+            <a href="#" class="logo">
+                  <img src="../images/Tóth Gabriella.svg" width="300" height="50" alt="Grilli - Home">
+            </a>
+      
+            <ul class="navbar-list">
+      
+                  <li class="navbar-item">
+                  <a href="#home" class="navbar-link hover-underline active">
+                  <div class="separator"></div>
+      
+                  <span class="span">Főoldal</span>
+                  </a>
+                  </li>
+      
+                  <li class="navbar-item">
+                  <a href="#menu" class="navbar-link hover-underline">
+                  <div class="separator"></div>
+      
+                  <span class="span">Rólam</span>
+                  </a>
+                  </li>
+      
+                  <li class="navbar-item">
+                  <a href="#about" class="navbar-link hover-underline">
+                  <div class="separator"></div>
+      
+                  <span class="span">Családterápia</span>
+                  </a>
+                  </li>
+      
+                  <li class="navbar-item">
+                  <a href="#" class="navbar-link hover-underline">
+                  <div class="separator"></div>
+      
+                  <span class="span">Párterápia</span>
+                  </a>
+                  </li>
+      
+                  <li class="navbar-item">
+                  <a href="#" class="navbar-link hover-underline">
+                  <div class="separator"></div>
+      
+                  <span class="span">Blog</span>
+                  </a>
+                  </li>
+      
+                  <li class="navbar-item">
+                  <a href="#" class="navbar-link hover-underline">
+                  <div class="separator"></div>
+      
+                  <span class="span">Helyszínek</span>
+                  </a>
+                  </li>
+      
+            </ul>
+      
+      
+            <div class="text-center">
+                  <a href="#" class="headline-2 navbar-title">Kapcsolat</a>
+      
+                  <address class="body-4">
+                  1223 Budapest <br>
+                  Platina utca 1/1
+                  </address>
+      
+                  <div class="separator"></div>
+      
+                  <a href="mailto:info@tothgabriella.hu.com" class="body-4 sidebar-link">info@tothgabriella.hu</a>
+      
+                  <div class="separator"></div>
+      
+                  <p class="contact-label">Mobil</p>
+      
+                  <a href="tel:+36705764224" class="body-4 contact-number hover-underline">
+                  +36 70 576 4224
+                  </a>
+            </div>
+      
+            </nav>
+      
+            <a href="#" class="btn btn-secondary">
+            <span class="text text-1">Kapcsolat</span>
+      
+            <span class="text text-2" aria-hidden="true">Kapcsolat</span>
+            </a>
+      
+            <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+            </button>
+      
+            <div class="overlay" data-nav-toggler data-overlay></div>
+      
+            </div>
+      </header>
+  
+      <main>
+            <article>
+
+                 
+
+
+                  <!-- 
+                  -#PLACE
+                  -->
+
+                  <section class="section place w-100 text-center" aria-label="">
+                  
+                        <div class="container py-16 m-0">
+                              <div class="heading">
+                                    <h2 class="body-3 place-title">HELYSZÍNEK</h2>
+                                    <h1 class="title-1 place-title-1">Személyes és online konzultáció</h1>
+                              </div>
+            
+                              <div class="place-box flex">
+                                    <ul class="grid-place">
+            
+                                          <li class="place-item">
+                                                <div class="place-card">
+            
+                                                      <div class="card-img">
+                                                            <img src="../images/Platina.JPG"  class="place-img img-cover" loading="lazy" alt="mozaikcsalád központ">
+                                                      </div>
+                                                      <h3 class="place-text">személyes konzultáció </h3>
+                                                      <h2 class="body-3 card-title">Mozaikcsalád Központ (Budapest, XXII.)</h2>
+                                                      <p class="body-4 card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                                      Tempora eos eveniet, magni, labore ipsam fugiat earum doloribus, 
+                                                      </p>
+            
+                                                      <div class="place-info">
+                                                            <div class="info-card flex mb-2">
+                                    
+                                                                  <div class="place-icon">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                        <path fill="none" stroke="#8ca99c" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0 0 25.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                                                                        </svg>
+                                                                  </div>
+                                    
+                                                                  <div class="cont-text">
+                                                                        <a href="#" class="body-4 underline text-underline">1223 Budapest, Platina u. 1/1</a>
+                                                                  </div>
+                                                            </div>
+                  
+            
+                                                            <div class="info-card flex mb-2">
+                                                                  <div class="place-icon">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                        <path fill="none" stroke="#8ca99c" stroke-linecap="round" stroke-linejoin="round" stroke-width="36" d="M208 352h-64a96 96 0 0 1 0-192h64m96 0h64a96 96 0 0 1 0 192h-64m-140.71-96h187.42"/>
+                                                                        </svg>
+                                                                  </div>
+                                                                  <div class="cont-text">
+                                                                        <a href="#" class="body-4">http://mozaikcsalad.hu</a>
+                                                                  </div>
+                                                            </div>
+                                                      </div>
+                                                      
+                                                      <!--<a href="#" class="btn-text hover-underline label-2">Kérjen időpontot</a>-->
+                                                      <div class="btn-wrapper">
+                                                            <a href="#" class="btnlink" target="_blank">
+                                                              <div class="orange"></div>
+                                                              <span>Kérjen időpontot</span>
+                                                              <i class="fa-solid fa-arrow-right"></i>
+                                                            </a>
+                                                      </div>  
+                                                </div>
+                                          </li>
+            
+                                          <li class="place-item">
+                                                <div class="place-card">
+            
+                                                      <div class="card-img">
+                                                            <img src="../images/helyszin-2.png"  class="place-img img-cover" loading="lazy" alt="mozaikcsalád központ">
+                                                      </div>
+                                                      <h3 class="place-text">személyes konzultáció </h3>
+                                                      <h2 class="body-3 card-title">Pszichológiai Rendelő (Budapest, XIV.)</h2>
+                                                      <p class="body-4 card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                                            Tempora eos eveniet, magni, labore ipsam fugiat earum doloribus, 
+                                                      </p>
+            
+                                                      <div class="place-info">
+                                                            <div class="info-card flex mb-2">
+                                    
+                                                                  <div class="place-icon">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                        <path fill="none" stroke="#8ca99c" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0 0 25.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
+                                                                        </svg>
+                                                                  </div>
+                                                                  <div class="cont-text">
+                                                                        <a href="#" class="body-4 underline text-underline">1142 Budapest, Dorozsmai utca 110.</a>
+                                                                  </div>
+                                                            </div>
+                  
+                                                            
+            
+                                                            <div class="info-card flex mb-2">
+                                                                  <div class="place-icon">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                        <path fill="none" stroke="#8ca99c" stroke-linecap="round" stroke-linejoin="round" stroke-width="36" d="M208 352h-64a96 96 0 0 1 0-192h64m96 0h64a96 96 0 0 1 0 192h-64m-140.71-96h187.42"/>
+                                                                        </svg>
+                                                                  </div>
+                                                                  <div class="cont-text">
+                                                                        <a href="#" class="body-4">http://almafa.hu</a>
+                                                                  </div>
+                                                            </div>
+                                                      </div>
+            
+                                                      <!--<a href="#" class="btn-text hover-underline label-2">Kérjen időpontot</a>-->
+                                                      <div class="btn-wrapper">
+                                                            <a href="#" class="btnlink" target="_blank">
+                                                              <div class="orange"></div>
+                                                              <span>Kérjen időpontot</span>
+                                                              <i class="fa-solid fa-arrow-right"></i>
+                                                            </a>
+                                                      </div>  
+                                                </div>
+                                          </li>
+
+                                          <li class="place-item">
+                                                <div class="place-card">
+            
+                                                      <div class="card-img">
+                                                            <img src="../images/helyszin-3.png"  class="place-img img-cover" loading="lazy" alt="mozaikcsalád központ">
+                                                      </div>
+                                                      <h3 class="place-text">online konzultáció </h3>
+                                                      <h2 class="body-3 card-title"></h2>
+                                                      <p class="body-4 card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                                            Tempora eos eveniet, magni, labore ipsam fugiat earum doloribus, 
+                                                      </p>
+            
+                                                      <div class="place-info">
+                                                            <div class="info-card flex gap-3 mb-2">
+                                                                  <div class="place-icon">
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                                                              <path fill="none" stroke="#8ca99c" stroke-linecap="round" stroke-linejoin="round" stroke-width="36" d="M208 352h-64a96 96 0 0 1 0-192h64m96 0h64a96 96 0 0 1 0 192h-64m-140.71-96h187.42"/>
+                                                                        </svg>
+                                                                  </div>
+                                                                  <div class="cont-text">
+                                                                        <div class="body-4">Google Meet, Zoom</div>
+                                                                  </div>
+                                                            </div>
+                                                      </div>
+            
+                                                      <div class="btn-wrapper">
+                                                            <a href="#" class="btnlink" target="_blank">
+                                                              <div class="orange"></div>
+                                                              <span>Kérjen időpontot</span>
+                                                              <i class="fa-solid fa-arrow-right"></i>
+                                                            </a>
+                                                      </div>  
+                                                </div>
+                                          </li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </section>
+
+
+
+       
+
+
+
+
+                  <!-- 
+                  - #FOOTER
+                  -->
+
+                  <footer class="footer section w-100 text-center">
+                  
+                        <div class="container py-16 m-0">
+
+                        <div class="footer-top grid-list">
+                  
+                        <div class="footer-bottom">
+
+                              <p class="copyright">
+                              &copy; 2024 gabriellatoth| All Rights Reserved | by <a href="#" target="_blank" class="link">Webrabbit | Adatkezelési tájékoztató</a> 
+                              </p>
+                        </div>
+
+                        </div>
+
+                        </div>
+                  </footer>
+            </article>
+      </main>
+  
+      <!-- 
+            - #BACK TO TOP
+      -->
+
+      <a href="#top" class="back-top-btn active" aria-label="back to top" data-back-top-btn>
+            <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+      </a>
+  
+  
+    
+  
+  
+  
+      <!-- 
+            - custom js link
+      -->
+      <script src="../js/script.js"></script>
+      <script src="../js/gsap.js"></script>
+  
+      <!-- 
+            - ionicon link
+      -->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+      
+</body>
+</html>
