@@ -13,6 +13,13 @@ import {
   Navigate
 } from "react-router-dom"
 
+import About from "./components/about"
+import Csaladterapia from "./components/csaladterapia"
+import Parterapia from "./components/parterapia"
+import Blog from "./components/blog"
+import Helyszinek from "./components/helyszinek"
+import Contact from "./components/contact";
+
 function App() {
   return (
     <BrowserRouter>
@@ -22,9 +29,14 @@ function App() {
           <ScrollToTop>
             <Routes>
 
-            <Route path="/" element={<LandingPage/>}/>
-
-            <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="/about" element={<About/>}/>
+              <Route path="/csaladterapia" element={<Csaladterapia/>}/>
+              <Route path="/parterapia" element={<Parterapia/>}/>
+              <Route path="/blog" element={<Blog/>}/>
+              <Route path="/helyszinek" element={<Helyszinek/>}/>
+              <Route path="/contact" element={<Contact/>}/>
+              <Route path="/" element={<LandingPage/>}/>
+              <Route path="*" element={<Navigate to="/" replace />} />
 
             </Routes>
           </ScrollToTop>

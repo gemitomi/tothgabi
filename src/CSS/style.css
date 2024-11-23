@@ -152,7 +152,7 @@ body {
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
-  overflow: hidden;
+  overflow: scroll;
 
 }
 
@@ -335,6 +335,7 @@ address { font-style: normal; }
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: var(--letterSpacing-5);
+  min-width: max-content;
   max-width: max-content;
   border-radius: var(--radius-6);
   padding: 10px 26px;
@@ -649,6 +650,9 @@ i{margin-left: 0.5em;}
 
 .topbar { display: none; }
 
+.topbar.hide {
+  transform: translateY(-100%);
+}
 
 @media (min-width: 575px){
 
@@ -727,21 +731,24 @@ i{margin-left: 0.5em;}
   top: 0;
   left: 0;
   width: 100%;
-  background-color: transparent;
+  /*background-color: transparent;*/
+  background-color: #fff;
   padding-block: 40px;
   z-index: 4;
   border-block-end: 1px solid transparent;
-  transition: var(--transition-1);
+  /*transition: var(--transition-1);*/
+  transition: background-color 0.3s ease; /* Animáció a színváltásra */
 }
 
-.header.active {
+header .header.active {
   padding-block: 20px;
-  background-color: var(--background-b);
+  background-color: var(--background-b) !important;
   border-color: var(--primary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .header.hide {
-  transform: translateY(-100%);
+  transform: translateY(-300%);
   transition-delay: 250ms;
 }
 
