@@ -78,21 +78,21 @@ export default function Header() {
             <span className="span"></span>
           </div>
 
-          <a href="tel:+36705764224" className="topbar-item link">
+          <Link to="tel:+36705764224" className="topbar-item link">
             <div className="icon">
               <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
             </div>
             <span className="span">+36 70 576 4224</span>
-          </a>
+          </Link>
 
           <div className="separator"></div>
 
-          <a href="mailto:info@tothgabriella.hu" className="topbar-item link">
+          <Link to="mailto:info@gabriellatoth.com" className="topbar-item link">
             <div className="icon">
               <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </div>
-            <span className="span">info@tothgabriella.hu</span>
-          </a>
+            <span className="span">info@gabriellatoth.com</span>
+          </Link>
         </div>
       </div>
 
@@ -103,14 +103,14 @@ export default function Header() {
         data-header
       >
         <div className="container">
-          <a href="#" className="logo">
+          <Link to="/" className="logo">
             <img
               src={ProfilePic01}
               width="300"
               height="50"
               alt="TothGabriella - Home"
             />
-          </a>
+          </Link>
 
           {/* Navbar */}
           <nav className={`navbar ${isNavActive ? "active" : ""}`} data-navbar>
@@ -122,14 +122,14 @@ export default function Header() {
               <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
             </button>
 
-            <a href="#" className="logo">
+            <Link to="/" className="logo">
               <img
                 src={ProfilePic01}
                 width="300"
                 height="50"
                 alt="Grilli - Home"
               />
-            </a>
+            </Link>
 
             <ul className="navbar-list">
               <li className="navbar-item">

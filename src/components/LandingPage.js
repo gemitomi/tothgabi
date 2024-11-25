@@ -1,4 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import "../CSS/style.css"
 import HeroBannerGabi02 from "../image/hero-banner-gabi2.png"
@@ -14,7 +18,15 @@ import ArrowDown from "../image/arrow-down.png"
 export default function LandingPage() {
   
   const [scrollPosition, setScrollPosition] = useState(0);
-  
+  const slideRef = useRef(null); // Referencia a csúszka elemhez
+  const [position, setPosition] = useState(0); // Aktuális pozíció
+  const [maxTopPosition, setMaxTopPosition] = useState(0); // Maximális eltolás
+  const containerHeight = 300; // Egy véleménykártya magassága
+
+  const btnWrapperRef = useRef(null);
+  const contentWrapperRef = useRef(null);
+  const stickyImageRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
@@ -27,7 +39,89 @@ export default function LandingPage() {
     };
   }, []);
 
-  
+  // Határozd meg a slide magasságát, miután betöltött
+  useEffect(() => {
+    if (slideRef.current) {
+      const slideHeight = slideRef.current.scrollHeight;
+      setMaxTopPosition(-(slideHeight - containerHeight));
+    }
+  }, []);
+
+  // Felfelé mozgás
+  const handleUpArrowClick = () => {
+    if (position > maxTopPosition) {
+      setPosition((prevPosition) => prevPosition - containerHeight);
+    }
+  };
+
+  // Lefelé mozgás
+  const handleDownArrowClick = () => {
+    if (position < 0) {
+      setPosition((prevPosition) => prevPosition + containerHeight);
+    }
+  };
+
+  useEffect(() => {
+    // Ellenőrizzük, hogy a DOM elem valóban elérhető
+    if (btnWrapperRef.current) {
+      const btnLinks = btnWrapperRef.current.querySelectorAll(".btnlink");
+
+      btnLinks.forEach((btnlink) => {
+        const orange = btnlink.querySelector(".orange");
+
+        // Egyedi idővonal minden gombhoz
+        const hoverTL = gsap.timeline({ paused: true });
+        hoverTL.to(orange, {
+          width: "calc(100% + 1.3em)",
+          ease: "elastic.out(0.25, 0.3)",
+          duration: 0.5,
+        });
+        hoverTL.to(orange, {
+          width: "2em",
+          left: "calc(100% - 1.45em)",
+          ease: "elastic.out(0.25, 0.3)",
+          duration: 0.5,
+        });
+
+        // Események hozzáadása
+        const onMouseEnter = () => hoverTL.play();
+        const onMouseLeave = () => hoverTL.reverse();
+
+        btnlink.addEventListener("mouseenter", onMouseEnter);
+        btnlink.addEventListener("mouseleave", onMouseLeave);
+
+        // Cleanup: eltávolítjuk az eseményeket, hogy elkerüljük a memória szivárgást
+        return () => {
+          btnlink.removeEventListener("mouseenter", onMouseEnter);
+          btnlink.removeEventListener("mouseleave", onMouseLeave);
+        };
+      });
+    }
+
+    // ScrollTrigger beállítások
+    if (contentWrapperRef.current) {
+      const contentHeight = contentWrapperRef.current.scrollHeight;
+
+      ScrollTrigger.create({
+        trigger: ".sticky-section",
+        start: "top top",
+        end: `+=${contentHeight}`,
+        pin: stickyImageRef.current,
+        scrub: true,
+      });
+
+      ScrollTrigger.create({
+        trigger: ".next-section",
+        start: "top top",
+        pinSpacing: false,
+      });
+
+      // Cleanup: ScrollTrigger eltávolítása
+      return () => {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      };
+    }
+  }, []);
 
   return (
     <div>
@@ -46,12 +140,12 @@ export default function LandingPage() {
                 Azért vagyok itt, hogy segítsek megérteni a nehézségeket, megtalálni a megoldásokat és helyreállítani a belső harmóniát. 
               </p>
                 
-              <div className="btn-wrapper">
-                <a href="#" className="btnlink" target="_blank">
+              <div ref={btnWrapperRef} className="btn-wrapper">
+                <Link to="/about" className="btnlink" target="_blank">
                   <div className="orange"></div>
                     <span>BŐVEBBEN</span>
                     <i className="fa-solid fa-arrow-right"></i>
-                </a>
+                </Link>
               </div>  
             </div>
 
@@ -93,12 +187,12 @@ export default function LandingPage() {
                     <p className="body-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ipsa minima rerum ea amet quae quaerat minus est, 
                       corporis, aspernatur fugit architecto aperiam blanditiis numquam laborum sapiente dolore soluta voluptate repudiandae velit vel eveniet nisi sint rem! Cumque excepturi voluptatum facilis doloremque, enim similique, veritatis velit laudantium quis, omnis reprehenderit!</p>
                   </div>
-                  <div className="btn-wrapper">
-                    <a href="#" className="btnlink" target="_blank">
+                  <div ref={btnWrapperRef} className="btn-wrapper">
+                    <Link to="/csaladterapia" className="btnlink" target="_blank">
                       <div className="orange"></div>
                       <span>BŐVEBBEN</span>
                       <i className="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </Link>
                   </div>  
                 </div>
                   
@@ -126,12 +220,12 @@ export default function LandingPage() {
                     <p className="body-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ipsa minima rerum ea amet quae quaerat minus est, corporis,
                        aspernatur fugit architecto aperiam blanditiis numquam laborum sapiente dolore soluta voluptate repudiandae velit vel eveniet nisi sint rem! Cumque excepturi voluptatum facilis doloremque, enim similique, veritatis velit laudantium quis, omnis reprehenderit!</p>
                   </div>
-                  <div className="btn-wrapper">
-                    <a href="#" className="btnlink" target="_blank">
+                  <div ref={btnWrapperRef} className="btn-wrapper">
+                    <Link to="/parterapia" className="btnlink" target="_blank">
                       <div className="orange"></div>
                       <span>BŐVEBBEN</span>
                       <i className="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </Link>
                   </div>  
                 </div>
               </div>
@@ -152,11 +246,7 @@ export default function LandingPage() {
           1200,120,1080,120C960,120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path></svg>
         
       </section>
-      
-
-
-
-      
+   
       <section className="section w-100 sec2 bg-b left-right-sec" aria-label="">
         
         <div className="container py-16 m-0">
@@ -180,12 +270,12 @@ export default function LandingPage() {
                     <li className="h-list-has-before">gyász, veszteség feldolgozása a családban</li>
                     <li className="h-list-has-before">szenvedélybetegség a családban</li>
                   </ul>
-                  <div className="btn-wrapper">
-                    <a href="#" className="btnlink" target="_blank">
+                  <div ref={btnWrapperRef} className="btn-wrapper">
+                    <Link to="/contact" className="btnlink" target="_blank">
                       <div className="orange"></div>
                       <span>KÉRJEN IDŐPONTOT</span>
                       <i className="fa-solid fa-arrow-right"></i>
-                    </a>
+                    </Link>
                   </div>  
                 </div>
               </div>
@@ -199,9 +289,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      
-
-     
       <section className="section w-100 section-width-full bg text-center">
       <svg
         id="waves-1"
@@ -222,52 +309,71 @@ export default function LandingPage() {
           120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z">
         </path>
       </svg>
-        <div className="testimonal">
-          <div className="container py-16 m-0">
-            
-            <div className="headline-1 testimonials-heading">
-              <h2 className="title-1 section-title has-after">Ügyfeleim visszajelzései</h2>
-            </div>
-          
-          
-            <div className="grid grid-xl gap-6 m-0">
-              <div className=" image-container">
-                <img src={Testimonal} className="testimonal-profimg" alt="vélemények"/>
+      <div className="testimonal">
+      <div className="container py-16 m-0">
+        <div className="headline-1 testimonials-heading">
+          <h2 className="title-1 section-title has-after">Ügyfeleim visszajelzései</h2>
+        </div>
+
+        <div className="grid grid-xl gap-6 m-0">
+          {/* Bal oldali kép */}
+          <div className="image-container">
+            <img src={Testimonal} className="testimonal-profimg" alt="vélemények" />
+          </div>
+
+          {/* Jobb oldali csúszka */}
+          <div className="revive-content-box flex flex-col">
+            <div className="revive-box flex flex-col">
+              {/* Csúszka tartalom */}
+              <div
+                id="slide"
+                ref={slideRef}
+                className="slider"
+                style={{ top: `${position}px`}}
+              >
+                <div className="content-card">
+                  <div className="testimonal-profile">
+                    <img src={TestimonalBG} alt="idézőjel" />
+                    <p className="body-2 first-t">P. Anna.</p>
+                  </div>
+                  <p className="body-4 pre-wrap-text">
+                    2022. Tavaszán, 16 év után felfordulás az életünk és válságba került a házasságunk. Úgy éreztem,
+                    hogy meg kell próbálnunk egy párterápiát. Így elkezdtünk járni Gabihoz. Életünk egyik legjobb döntése
+                    volt. A párom szkeptikus volt, de a mai napig azt állítja, hogy ez életünk egyik nagyon jó döntése
+                    volt. Mindketten úgy gondoljuk, hogy a terápia nélkül nem lett volna biztos az Újra kezdés, nem
+                    jött volna rendbe a házasságunk. Nem csak egymást ismertük meg még jobban, de saját magunknak is
+                    okoztunk meglepetés. Rögös volt az út, de úgy hisszük, hogy most már sínen vagyunk!
+                  </p>
+                  <p className="body-4 pre-wrap-text">Köszönjük Gabi!</p>
+                </div>
+
+                <div className="content-card">
+                  <div className="testimonal-profile">
+                    <img src={Citates01} className="" alt="idézőjel" />
+                    <p className="body-2 first-t">L. Dóra.</p>
+                  </div>
+                  <p className="body-4 pre-wrap-text">
+                    Gabriellával akkor találkoztunk, amikor kis családunknak arra a legnagyobb szüksége volt. Személyében
+                    olyan szakembert ismerhettünk meg, aki végtelen nyugalommal és empátiával de szoros iránymutatással
+                    tud végigvezetni az önismeret és a család működésének, megismerésének útján. Segítségével könnyebb
+                    volt a problémás területekkel való szembenézés, majd az azt követő megoldás közös megtalálása is.
+                  </p>
+                  <p className="body-4 pre-wrap-text">
+                    Köszönettel tartozunk Neki, hogy segített visszatalálni a régebbi, jól működő családunkhoz.
+                  </p>
+                </div>
               </div>
 
-              <div className="revive-content-box flex flex-col">
-                <div className="revive-box flex flex-col">
-                  <div id="slide">
-                    <div className="content-card">
-                      <div className="testimonal-profile">
-                        <img src={TestimonalBG} alt="idézőjel"/>
-                        <p className="body-2 first-t">P. Anna.</p>
-                      </div>
-                      
-                      <p className="body-4 pre-wrap-text">2022. Tavaszán, 16 év után felfordulás az életünk és válságba került a házasságunk. Úgy éreztem, hogy meg kell próbálnunk egy párterápiát. Így elkezdtünk járni Gabihoz. Életünk egyik legjobb döntése volt. A párom szkeptikus volt, de a mai napig azt állítja, hogy ez életünk egyik nagyon jó döntése volt. Mindketten úgy gondoljuk, hogy a terápia nélkül nem lett volna biztos az Újra kezdés, nem jött volna rendbe a házasságunk. Nem csak egymást ismertük meg még jobban, de saját magunknak is okoztunk meglepetés. Rögös volt az út, de úgy  hisszük, hogy most már sínen vagyunk!</p>
-                      <p className="body-4 pre-wrap-text">Köszönjük Gabi!</p>
-                      
-                    </div>
-                    <div className="content-card">
-                      <div className="testimonal-profile">
-                        <img src={Citates01} className="" alt="idézőjel"/>
-                        <p className="body-2 first-t">L. Dóra.</p>
-                      </div>
-                        
-                      <p className="body-4 pre-wrap-text">Gabriellával akkor találkoztunk, amikor kis családunknak arra a legnagyobb szüksége volt. Személyében olyan szakembert ismerhettünk meg, aki végtelen nyugalommal és empátiával de szoros iránymutatással tud végigvezetni az önismeret és a család működésének, megismerésének útján.  Segítségével könnyebb volt a problémás területekkel való szembenézés, majd az azt követő megoldás közös megtalálása is.</p>
-                      <p className="body-4 pre-wrap-text">Köszönettel tartozunk Neki, hogy segített visszatalálni a régebbi, jól működő családunkhoz.</p>
-                      
-                    </div>
-                  </div>
-                  <div className="sidebar">
-                    <img src={ArrowUp} id="upArrow"/>
-                    <img src={ArrowDown} id="downArrow"/>
-                  </div>
-                </div>
+              {/* Nyilak */}
+              <div className="sidebar">
+                <img src={ArrowUp} id="upArrow" onClick={handleUpArrowClick} alt="Fel nyíl" />
+                <img src={ArrowDown} id="downArrow" onClick={handleDownArrowClick} alt="Le nyíl" />
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
       </section>
 
      
@@ -285,44 +391,46 @@ export default function LandingPage() {
                 <div className="box-container">
 
                   <div className="box flex ">
-                    <a href="#"><i className="fas fa-map"></i>Budapest, Budaörs</a>
+                    <i className="fas fa-map"></i><Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" target="_blank">Budapest XXII.,</Link><Link to="https://www.google.com/maps/place/Budapest,+Dorozsmai+u.+110,+1142/@47.5267597,19.0995012,17z/data=!3m1!4b1!4m6!3m5!1s0x4741db75e82d206f:0x9a3a82a99330b72!8m2!3d47.5267561!4d19.1020761!16s%2Fg%2F11c2bbwkxq?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" target="_blank"> Budapest XIV.</Link>
                   </div>
                   <div className="box flex">
-                    <a href="#"><i className="fas fa-envelope"></i>info@gabriellatoth.com</a>
+                    <Link to="mailto:info@gabriellatoth.com"><i className="fas fa-envelope"></i>info@gabriellatoth.com</Link>
                   </div>
                   <div className="box flex">
-                    <a href="#"><i className="fas fa-phone"></i>+36 70 576 4224</a>
+                    <Link to="#"><i className="fas fa-phone"></i>+36 70 576 4224</Link>
                   </div>
                   
                 </div>
                 <div className="share">
-                  <a href="#" className="fab fa-facebook-f"></a>
-                  <a href="#" className="fab fa-instagram"></a>
-                  <a href="#" className="fab fa-linkedin"></a>
+                  <Link to="#" className="fab fa-facebook-f"></Link>
+                  <Link to="#" className="fab fa-instagram"></Link>
+                  <Link to="#" className="fab fa-linkedin"></Link>
                 </div>
               </div>
-
-              <form action="">
+              
+              <form action="mail.php" method="POST">
                 <div className="contact-input-box">
-                  <input type="text" name="" value="" placeholder="Név"/> 
+                  <input type="text" name="" value="" placeholder="Név" required="required"/> 
                   
                 </div>
             
                 <div className="contact-input-box">
-                  <input type="text" name="" value="" placeholder="E-mail"/>
+                  <input type="text" name="" value="" placeholder="E-mail" required="required"/>
                 </div>
 
                 <div className="contact-input-box">
-                  <input type="text" name="" value="" placeholder="Mobil"/>
+                  <input type="text" name="" value="" placeholder="Mobil" required="required"/>
                 </div>
 
                 <div className="contact-input-box">
-                  <textarea name="name" rows="4" cols="80" placeholder="Írjon üzenetet!"></textarea>
+                  <textarea name="name" rows="4" cols="80" placeholder="Írjon üzenetet!" required="required"></textarea>
                 </div>
+
                 <div className="contact-input-box">
                   <input type="submit" className="send-btn" name="" value="Küldés"/>
                 </div>
               </form>
+              
 
             </div>
 

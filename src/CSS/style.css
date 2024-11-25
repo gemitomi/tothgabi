@@ -671,6 +671,7 @@ i{margin-left: 0.5em;}
     border-block-end: 1px solid var(--background);/*az alsó border színe*/
     z-index: 4;
     transition: var(--transition-1);
+    padding-left: 10px;
   }
 
   .topbar:has(~ .header.active) { transform: translateY(-100%); }
@@ -1391,7 +1392,9 @@ p.help{
   background-size: cover;
   overflow: hidden;
   padding-bottom: 2rem;
-  
+  /*react*/
+  width: 100%;
+  margin: 0 auto;
 }
 
 .testimonials-heading{
@@ -1465,6 +1468,11 @@ p.help{
   position: relative;
   text-align: left;
   z-index: 1;
+  /* react */
+  
+  
+  display: flex;
+  flex-direction: column;
 }
 
 .content-card::before{
@@ -1505,6 +1513,10 @@ p.help{
   top: 0;
   left: 0;
   transition: 0.5s ease;
+}
+
+.slider {
+  transition: top 0.3s ease; /* React Animáció gördülékeny mozgáshoz */
 }
 
 .sidebar{
@@ -1734,6 +1746,7 @@ form{
   background: var(--orange-h);
   color: var(--primaryButtonBgColor);
 }
+
 
 /*-----------------------------------*\
   CONTACT END
