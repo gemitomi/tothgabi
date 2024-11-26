@@ -8,7 +8,7 @@ import AboutProfile from "../image/hero-banner-gabi2.png"
 
   gsap.registerPlugin(ScrollTrigger);
 
-  const AnimatedSection = () => {
+const AnimatedSection = () => {
   const btnWrapperRef = useRef(null);
   const contentWrapperRef = useRef(null);
   const stickyImageRef = useRef(null);

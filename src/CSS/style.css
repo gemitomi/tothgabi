@@ -426,6 +426,7 @@ span, i {position: relative;}
 i{margin-left: 0.5em;}
 
 .orange{
+  display: inline-block;
   width: 2em;
   height: 2em;
   border-radius: 2em;

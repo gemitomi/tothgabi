@@ -24,11 +24,8 @@ export default function LandingPage() {
   const containerHeight = 300; // Egy véleménykártya magassága
 
   const btnWrapperRef = useRef(null);
-  const btnWrapperRef1 = useRef(null);
-  const btnWrapperRef2= useRef(null);
-  const btnWrapperRef3 = useRef(null);
-  //const contentWrapperRef = useRef(null);
-  //const stickyImageRef = useRef(null);
+  const contentWrapperRef = useRef(null);
+  const stickyImageRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -65,35 +62,66 @@ export default function LandingPage() {
   };
 
   useEffect(() => {
-    const addHoverEffect = (wrapperRef) => {
-      if (wrapperRef.current) {
-        const btnLinks = wrapperRef.current.querySelectorAll(".btnlink");
-        btnLinks.forEach((btnlink) => {
-          const orange = btnlink.querySelector(".orange");
-          const hoverTL = gsap.timeline({ paused: true });
-          hoverTL.to(orange, { width: "calc(100% + 1.3em)", duration: 0.5 });
-          hoverTL.to(orange, { width: "2em", left: "calc(100% - 1.45em)", duration: 0.5 });
-  
-          const onMouseEnter = () => hoverTL.play();
-          const onMouseLeave = () => hoverTL.reverse();
-  
-          btnlink.addEventListener("mouseenter", onMouseEnter);
-          btnlink.addEventListener("mouseleave", onMouseLeave);
-  
-          return () => {
-            btnlink.removeEventListener("mouseenter", onMouseEnter);
-            btnlink.removeEventListener("mouseleave", onMouseLeave);
-          };
+    // Ellenőrizzük, hogy a DOM elem valóban elérhető
+    if (btnWrapperRef.current) {
+      const btnLinks = btnWrapperRef.current.querySelectorAll(".btnlink");
+
+      btnLinks.forEach((btnlink) => {
+        const orange = btnlink.querySelector(".orange");
+
+        // Egyedi idővonal minden gombhoz
+        const hoverTL = gsap.timeline({ paused: true });
+        hoverTL.to(orange, {
+          width: "calc(100% + 1.3em)",
+          ease: "elastic.out(0.25, 0.3)",
+          duration: 0.5,
         });
-      }
-    };
-  
-    addHoverEffect(btnWrapperRef1);
-    addHoverEffect(btnWrapperRef2);
-    addHoverEffect(btnWrapperRef3);
-    addHoverEffect(btnWrapperRef);
+        hoverTL.to(orange, {
+          width: "2em",
+          left: "calc(100% - 1.45em)",
+          ease: "elastic.out(0.25, 0.3)",
+          duration: 0.5,
+        });
+
+        // Események hozzáadása
+        const onMouseEnter = () => hoverTL.play();
+        const onMouseLeave = () => hoverTL.reverse();
+
+        btnlink.addEventListener("mouseenter", onMouseEnter);
+        btnlink.addEventListener("mouseleave", onMouseLeave);
+
+        // Cleanup: eltávolítjuk az eseményeket, hogy elkerüljük a memória szivárgást
+        return () => {
+          btnlink.removeEventListener("mouseenter", onMouseEnter);
+          btnlink.removeEventListener("mouseleave", onMouseLeave);
+        };
+      });
+    }
+
+    // ScrollTrigger beállítások
+    if (contentWrapperRef.current) {
+      const contentHeight = contentWrapperRef.current.scrollHeight;
+
+      ScrollTrigger.create({
+        trigger: ".sticky-section",
+        start: "top top",
+        end: `+=${contentHeight}`,
+        pin: stickyImageRef.current,
+        scrub: true,
+      });
+
+      ScrollTrigger.create({
+        trigger: ".next-section",
+        start: "top top",
+        pinSpacing: false,
+      });
+
+      // Cleanup: ScrollTrigger eltávolítása
+      return () => {
+        ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      };
+    }
   }, []);
-  
 
   return (
     <div>
@@ -112,12 +140,12 @@ export default function LandingPage() {
                 Azért vagyok itt, hogy segítsek megérteni a nehézségeket, megtalálni a megoldásokat és helyreállítani a belső harmóniát. 
               </p>
                 
-              <div ref={btnWrapperRef3} className="btn-wrapper">
-                <Link to="/about" className="btnlink" target="_blank">
+              <div ref={btnWrapperRef} className="btn-wrapper">
+                <button className="btnlink" >
                   <div className="orange"></div>
-                    <span>BŐVEBBEN</span>
+                    <span><Link to="/about" target="_blank">BŐVEBBEN </Link></span>
                     <i className="fa-solid fa-arrow-right"></i>
-                </Link>
+                </button>
               </div>  
             </div>
 
@@ -159,7 +187,7 @@ export default function LandingPage() {
                     <p className="body-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ipsa minima rerum ea amet quae quaerat minus est, 
                       corporis, aspernatur fugit architecto aperiam blanditiis numquam laborum sapiente dolore soluta voluptate repudiandae velit vel eveniet nisi sint rem! Cumque excepturi voluptatum facilis doloremque, enim similique, veritatis velit laudantium quis, omnis reprehenderit!</p>
                   </div>
-                  <div ref={btnWrapperRef2} className="btn-wrapper">
+                  <div ref={btnWrapperRef} className="btn-wrapper">
                     <Link to="/csaladterapia" className="btnlink" target="_blank">
                       <div className="orange"></div>
                       <span>BŐVEBBEN</span>
@@ -192,7 +220,7 @@ export default function LandingPage() {
                     <p className="body-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ipsa minima rerum ea amet quae quaerat minus est, corporis,
                        aspernatur fugit architecto aperiam blanditiis numquam laborum sapiente dolore soluta voluptate repudiandae velit vel eveniet nisi sint rem! Cumque excepturi voluptatum facilis doloremque, enim similique, veritatis velit laudantium quis, omnis reprehenderit!</p>
                   </div>
-                  <div ref={btnWrapperRef1} className="btn-wrapper">
+                  <div ref={btnWrapperRef} className="btn-wrapper">
                     <Link to="/parterapia" className="btnlink" target="_blank">
                       <div className="orange"></div>
                       <span>BŐVEBBEN</span>
