@@ -253,7 +253,7 @@
 /*-----------------------------------*\
   CALL START
 \*-----------------------------------*/
-    
+/*    
 .call-section{
   background: var(--background);
   
@@ -330,20 +330,20 @@
 
 
 .call-button:before{
-  content: "\f095"; /* A Font Awesome telefon ikon kódja */
+  content: "\f095"; 
   font-family: "Font Awesome 5 free";
-  font-size: 40px; /* Az ikon mérete */
-  color: var(--primaryButtonBgColor); /* Az ikon színe */
+  font-size: 40px; 
+  color: var(--primaryButtonBgColor); 
   position: absolute;
   transform: rotate(1deg);
-  left: -50px; /* Tarts távolságot a gombtól */
+  left: -50px; 
 }
 
 @media (max-widt:992px){
   .grid{
     grid-template-columns: 1fr;
   }
-}
+}*/
 /*-----------------------------------*\
   CALL END
 \*-----------------------------------*/

@@ -15,7 +15,7 @@
       margin-bottom: 5rem;
 }
      
-.contact .has-after::after{
+.contact-t .has-after::after{
       width: 15%;
       height: 1px;
       bottom: -15px;

@@ -26,7 +26,7 @@ export default function contact() {
                   <div className="box flex">
                     <a href="#"><i className="fas fa-phone"></i>+36 70 576 4224</a>
                   </div>
-                  
+                
                 </div>
                 <div className="share">
                   <a href="#" className="fab fa-facebook-f"></a>
@@ -63,6 +63,9 @@ export default function contact() {
         </div>
         </div>
       </section>
+      <a href="#top" className="back-top-btn active" aria-label="back to top" data-back-top-btn>
+          <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+      </a>
     </div>
   )
 }

@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+</IfModule>
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP:X-Forwarded-SSL} !on
+RewriteCond %{HTTP_HOST} ^cybernews\.hu$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.cybernews\.hu$
+RewriteRule ^/?$ "https\:\/\/cybernews\.hu\/" [R=301,L]

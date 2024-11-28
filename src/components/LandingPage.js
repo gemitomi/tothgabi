@@ -204,7 +204,7 @@ export default function LandingPage() {
             </div>
           </div>
         </div>
-        <svg id="waves" style={{ transform: "rotate(180deg)", transition: "0.3s" }} viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+        <svg id="waves" style={{ transform: "rotate()", transition: "0.3s" }} viewBox="0 0 1440 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <path style={{ opacity: 1 }} fill="#f3eee8" d="M0,12L60,22C120,32,240,52,360,62C480,72,600,72,720,62C840,52,960,32,1080,
           30C1200,28,1320,44,1440,58C1560,72,1680,84,1800,78C1920,72,2040,48,2160,38C2280,28,2400,32,2520,40C2640,48,2760,60,
           2880,60C3000,60,3120,48,3240,42C3360,36,3480,36,3600,38C3720,40,3840,44,3960,48C4080,52,4200,56,4320,58C4440,60,4560,
@@ -305,7 +305,7 @@ export default function LandingPage() {
               >
                 <div className="content-card">
                   <div className="testimonal-profile">
-                    <img src={TestimonalBG} alt="idézőjel" />
+                    <img src={Citates01} alt="idézőjel" />
                     <p className="body-2 first-t">P. Anna.</p>
                   </div>
                   <p className="body-4 pre-wrap-text">
@@ -363,7 +363,7 @@ export default function LandingPage() {
                 <div className="box-container">
 
                   <div className="box flex ">
-                    <i className="fas fa-map"></i><Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" target="_blank">Budapest XXII.,</Link><Link to="https://www.google.com/maps/place/Budapest,+Dorozsmai+u.+110,+1142/@47.5267597,19.0995012,17z/data=!3m1!4b1!4m6!3m5!1s0x4741db75e82d206f:0x9a3a82a99330b72!8m2!3d47.5267561!4d19.1020761!16s%2Fg%2F11c2bbwkxq?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D" target="_blank"> Budapest XIV.</Link>
+                    <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" target="_blank"><i className="fas fa-map"></i>Budapest,</Link><Link to="http://maps.google.com/?q=Budaörs+napsugar+setany+4" target="_blank"> Budaörs</Link>
                   </div>
                   <div className="box flex">
                     <Link to="mailto:info@gabriellatoth.com"><i className="fas fa-envelope"></i>info@gabriellatoth.com</Link>
@@ -410,8 +410,8 @@ export default function LandingPage() {
         </div>
       </section>
       <a href="#top" className="back-top-btn active" aria-label="back to top" data-back-top-btn>
-          <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
-        </a>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+      </a>
     </div>
   )
 }

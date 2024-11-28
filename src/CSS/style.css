@@ -152,7 +152,7 @@ body {
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
-  overflow: scroll;
+  /*overflow: scroll;*/
 
 }
 
@@ -164,7 +164,7 @@ body.nav-active { overflow: hidden; }
 
 ::-webkit-scrollbar-track { background-color: transparent; }
 
-::-webkit-scrollbar-thumb { background-color: var(--background); }
+::-webkit-scrollbar-thumb { background-color: var(--primary); }
 
 
 li { list-style: none; }
@@ -244,7 +244,10 @@ address { font-style: normal; }
   line-height: var(--lineHeight-6);
 }
 
-.title-1 { font-size: var(--fontSize-title-1); }
+.title-1 { 
+  font-size: var(--fontSize-title-1); 
+  margin-bottom: 100px;
+}
 
 .title-2 { font-size: var(--fontSize-title-2); }
 
@@ -441,7 +444,7 @@ i{margin-left: 0.5em;}
 
 .has-before,
 .has-after {
-  position: relative;
+  /*position: relative;*/
   z-index: 1;
 }
 
@@ -734,7 +737,7 @@ i{margin-left: 0.5em;}
   left: 0;
   width: 100%;
   /*background-color: transparent;*/
-  background-color: #fff;
+  background-color: #fdfdf6;
   padding-block: 40px;
   z-index: 4;
   border-block-end: 1px solid transparent;
@@ -1088,7 +1091,7 @@ header .header.active {
   width: 100%;
   left: 0;
   z-index: -1;
-  
+
 }
 
 .new-home-case-study::before{
@@ -1618,7 +1621,7 @@ p.help{
 .contact{ 
   overflow: visible;
   background: var(--white);
-  padding-top: 0;
+  padding-top: 10em;
   /*background: linear-gradient(175deg, #fdfdf6 50%, #bcd9c9 50%, #c3d1cf);*/
 }
 

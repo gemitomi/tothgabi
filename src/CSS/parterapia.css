@@ -324,7 +324,7 @@
   font-size: 40px; /* Az ikon mérete */
   color: var(--primaryButtonBgColor); /* Az ikon színe */
   position: absolute;
-  transform: rotate(90deg);
+  transform: rotate(1deg);
   left: -50px; /* Tarts távolságot a gombtól */
 }
 
