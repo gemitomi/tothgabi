@@ -35,25 +35,24 @@ export default function contact() {
                 </div>
               </div>
 
-              <form action="">
+              <form action="mail.php" method="POST">
                 <div className="contact-input-box">
-                  <input type="text" name="" value="" placeholder="Név"/> 
-                  
+                  <input type="text" id="name" name="name" placeholder="Név" required="required"/>                   
                 </div>
             
                 <div className="contact-input-box">
-                  <input type="text" name="" value="" placeholder="E-mail"/>
+                  <input type="email" id="email" name="email" placeholder="E-mail" required="required"/>
                 </div>
 
                 <div className="contact-input-box">
-                  <input type="text" name="" value="" placeholder="Mobil"/>
+                  <input type="text" id="mobil" name="mobil" placeholder="Mobil" required="required"/>
                 </div>
 
                 <div className="contact-input-box">
-                  <textarea name="name" rows="4" cols="80" placeholder="Írjon üzenetet!"></textarea>
+                  <textarea name="message" rows="4" cols="80" placeholder="Írjon üzenetet!" required="required"></textarea>
                 </div>
                 <div className="contact-input-box">
-                  <input type="submit" className="send-btn" name="" value="Küldés"/>
+                  <input type="submit" className="send-btn" id="send" name="send" value="Küldés"/>
                 </div>
               </form>
 

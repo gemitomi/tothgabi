@@ -1437,7 +1437,7 @@ p.help{
 
 .testimonal{
   position: relative;
-  height: calc(100vh - 10.5rem);
+  height: 600px;
   background-image: url(../image/testimonal-bg-6.png); /* A háttérkép URL-je */
   background-position: 50%;
   background-repeat: no-repeat;
@@ -1620,7 +1620,7 @@ p.help{
 */
 @media (max-width: 992px){
   .testimonal{
-    height: 500px;
+    height: 550px;
   }
   .testimonal-profimg{
     display: none;
@@ -1754,6 +1754,8 @@ padding: 1rem 0;
   color: var(--primaryButtonBgColor);
   transition: .5s;
 }
+
+
 
 
 /*Kapcsolat 2. box kapcsolatfelvétel*/
