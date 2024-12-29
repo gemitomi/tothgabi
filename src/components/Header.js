@@ -19,6 +19,12 @@ export default function Header() {
     document.body.classList.toggle("nav-active", !isNavActive); // A navigációs menü megnyitása/zárása
   };
 
+  const handleMenuItemClick = () => {
+    if (isNavActive) {
+      toggleNavbar(); // Csak akkor zárja be, ha a menü éppen nyitva van
+    }
+  };
+
   // Görgetés eseménykezelése
   useEffect(() => {
     const handleScroll = () => {
@@ -132,43 +138,44 @@ export default function Header() {
             </Link>
 
             <ul className="navbar-list">
-              <li className="navbar-item">
-                <Link to="/" className="navbar-link hover-underline active">
-                  <div className="separator"></div>
-                  <span className="span">Főoldal</span>
-                </Link>
-              </li>
-              <li className="navbar-item">
-                <Link to="/about" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-                  <span className="span">Rólam</span>
-                </Link>
-              </li>
-              <li className="navbar-item">
-                <Link to="/csaladterapia" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-                  <span className="span">Családterápia</span>
-                </Link>
-              </li>
-              <li className="navbar-item">
-                <Link to="/parterapia" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-                  <span className="span">Párterápia</span>
-                </Link>
-              </li>
-              <li className="navbar-item">
-                <Link to="/blog" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-                  <span className="span">Blog</span>
-                </Link>
-              </li>
-              <li className="navbar-item">
-                <Link to="/helyszinek" className="navbar-link hover-underline">
-                  <div className="separator"></div>
-                  <span className="span">Helyszínek</span>
-                </Link>
-              </li>
-            </ul>
+  <li className="navbar-item" onClick={handleMenuItemClick}>
+    <Link to="/" className="navbar-link hover-underline active">
+      <div className="separator"></div>
+      <span className="span">Főoldal</span>
+    </Link>
+  </li>
+  <li className="navbar-item" onClick={handleMenuItemClick}>
+    <Link to="/about" className="navbar-link hover-underline">
+      <div className="separator"></div>
+      <span className="span">Rólam</span>
+    </Link>
+  </li>
+  <li className="navbar-item" onClick={handleMenuItemClick}>
+    <Link to="/csaladterapia" className="navbar-link hover-underline">
+      <div className="separator"></div>
+      <span className="span">Családterápia</span>
+    </Link>
+  </li>
+  <li className="navbar-item" onClick={handleMenuItemClick}>
+    <Link to="/parterapia" className="navbar-link hover-underline">
+      <div className="separator"></div>
+      <span className="span">Párterápia</span>
+    </Link>
+  </li>
+  <li className="navbar-item" onClick={handleMenuItemClick}>
+    <Link to="/blog" className="navbar-link hover-underline">
+      <div className="separator"></div>
+      <span className="span">Blog</span>
+    </Link>
+  </li>
+  <li className="navbar-item" onClick={handleMenuItemClick}>
+    <Link to="/helyszinek" className="navbar-link hover-underline">
+      <div className="separator"></div>
+      <span className="span">Helyszínek</span>
+    </Link>
+  </li>
+</ul>
+
 
             <div className="text-center">
               <Link to="/contact" className="headline-2 navbar-title">

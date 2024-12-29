@@ -46,7 +46,7 @@
   width: 100%;
   min-height: 1px;
   position: absolute;
-  bottom: -10px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   background: linear-gradient(to right,#003f5f, #bcd9c9);
@@ -62,185 +62,8 @@
 /*-----------------------------------*\
       FAMILY FIRST END
 \*-----------------------------------*/
-  
 
 
-
-
-
-
-
-/*-----------------------------------*\
-      FAMILY SECOND START
-\*-----------------------------------*/
-  
-.famco-text{
-  align-items: center;
-}
-
-.famco-title{
-  font-weight: 700;
-  margin-bottom: 2em;
-  margin-top: 1.2rem;
-  line-height: var(--lineHeight-2);
-  justify-content: center;
-}
-
-
-.famco-text .pretitle{
-  width: fit-content;
-  display: inline-flex;
-  align-items: flex-start;
-  background: linear-gradient(90deg, #d93636 20%, #f2a20c 100%);
-  /*background: linear-gradient(90deg, #003f5f 20%, #8ca99c 100%);*/
-  background-clip: text;
-  color:transparent;
-}
-
-
-.c-text-inner{
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.c-content-m{
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  margin-bottom: 5rem;
-  align-items: center;
-}
-
-.check-img-content{
-  width: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.check-img{
-  width: 5rem;
-  height: 5rem;
-  opacity: 0.5 !important;
-  justify-content: flex-start;
-  transition-duration: 0.9s;
-
-}
-
-.text-wrapper{
-  position: relative;
-  text-align: left;
-  flex: 1;
-}
-
-.text-wrapper .c-how-text:after{
-  content:"";
-  width: 100%;
-  min-height: 1px;
-  position: absolute;
-  bottom: -15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: linear-gradient(to right,#003f5f, #bcd9c9);
-
-}
-
-/*Kép jobb oldali oszlop*/
-.famco-right{
-  position: relative;
-}
-
-.famco-img{
-  position: relative;
-  padding: 0 3rem;
-}
-
-.famco-img img{
-  width: 100%;
-  margin-top: -120px;
-  border-radius: 8px;
-}
-
-@media (max-width: 900px){
-  .famco-img img{
-    display: none;
-  }
-}
-
-@media (max-width: 992px){
-  .famco-img img{
-   width: 50%;
-   margin: 0 auto;
-  }
-}
-
-/*-----------------------------------*\
-      FAMILY SECOND END
-\*-----------------------------------*/
-  
-
-
-
-
-
-/*-----------------------------------*\
-      FAMILY 3 SECTION START
-\*-----------------------------------*/
-  
-.section-q{
-  height: 40vh;
-  background-color: var(--primary);
-  background-image: url(../image/citates-bg.png);
-  background-attachment: fixed;
-  padding-top: 90px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.44);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  
-}
-
-.section-q:before{
-  background-image: repeating-linear-gradient(rgba(133, 153, 148, 0.6), rgba(133, 153, 148, 0.6));
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  pointer-events: none;
-}
-
-.content-q-wrapper{
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  padding-top: 3.3vmax;
-  padding-bottom: 3.3vmax;
-  row-gap: 20px;
-  width: 100%;
-  
-}
-
-.title-q{
- color: var(--background);
- font-weight: 700;
-}
-
-.text-q{
-  color: var(--background);
-  
-}
-
-/*-----------------------------------*\
-      FAMILY 3 SECTION END
-\*-----------------------------------*/
- 
 /*-----------------------------------*\
   CALL START
 \*-----------------------------------*/
@@ -262,6 +85,7 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.44);
   border-right-width: 0;
   border-radius: var(--radius-12);
+  
   
 }
 
@@ -328,9 +152,28 @@
   left: -50px; /* Tarts távolságot a gombtól */
 }
 
-@media (max-widt:992px){
+@media (max-width:992px){
   .grid{
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width:800px){
+  .call-img-box{
+    width: 620px;
+  }
+}
+
+@media (max-width:480px){
+  .call-img-box{
+    width: 300px;
+  }
+
+  .call-d{
+    margin-left: 1rem;
+  }
+  .call-button{
+    margin-left: 15rem;
   }
 }
 /*-----------------------------------*\
@@ -367,7 +210,7 @@
 
 .prices-pad{
   width: 100%;
-  padding: 30px 30px;
+  padding: 30px 10px;
 }
 
 .time-text{
@@ -455,6 +298,7 @@
   line-height: 1;
   text-align: left;
   padding-top: .5rem;
+  padding-right: 5px;
 }
     
 .plan-save{

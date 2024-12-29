@@ -155,9 +155,9 @@ export default function LandingPage() {
                   <div className="c-heading-block">
                     <h1 className="title-1 o-text pretitle">Családterápia</h1>
                   </div>
+                  
                   <div className="c-vc-column-text">
-                    <p className="body-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ipsa minima rerum ea amet quae quaerat minus est, 
-                      corporis, aspernatur fugit architecto aperiam blanditiis numquam laborum sapiente dolore soluta voluptate repudiandae velit vel eveniet nisi sint rem! Cumque excepturi voluptatum facilis doloremque, enim similique, veritatis velit laudantium quis, omnis reprehenderit!</p>
+                    <p className="body-4">A családterápia azokkal a problémákkal foglalkozik, amelyekkel az emberek az életükben jelentős személyekkel való kapcsolataik és a közösségi hálózataik összefüggésében jelentkeznek. Elsősorban a családi rendszerre, mint társadalmi egységre vonatkozik, ellentétben más pszichoterápiás megközelítésekkel, mint például a pszichodinamikus vagy a kognitív-viselkedési terápia, amelyek az egyénre összpontosítanak. A családterápia heterogén terület; különböző iskolák és modellek léteznek, amelyek több alapelvet és vezérlő feltevést osztanak.</p>
                   </div>
                   <div ref={btnWrapperRef2} className="btn-wrapper">
                     <Link to="/csaladterapia" className="btnlink" target="_blank">
@@ -170,6 +170,9 @@ export default function LandingPage() {
                   
                 <div className="o-img p-15">
                   <img src={CsalTerapia} className="img-cover object-contain" alt="családterápia"/>
+                </div>
+                <div className="o-img p-15">
+                  <img src={CsalTerapia} className="img-cover1 object-contain" alt="családterápia"/>
                 </div>
 
               </div>
@@ -189,8 +192,8 @@ export default function LandingPage() {
                     <h1 className="title-1 o-text pretitle">Párterápia</h1>
                   </div>
                   <div className="c-vc-column-text">
-                    <p className="body-4">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur ipsa minima rerum ea amet quae quaerat minus est, corporis,
-                       aspernatur fugit architecto aperiam blanditiis numquam laborum sapiente dolore soluta voluptate repudiandae velit vel eveniet nisi sint rem! Cumque excepturi voluptatum facilis doloremque, enim similique, veritatis velit laudantium quis, omnis reprehenderit!</p>
+                    <p className="body-4">A kapcsolatok kihívást jelenthetnek, ez nem kétséges. Egy kapcsolat soha nem lesz könnyű, az út során biztosan át kell vészelnie néhány zökkenőt.</p>
+                    <p className="body-4">A kapcsolat egy pontján azon kaphatja magátt, hogy eltávolodik a partnerétől – ennek oka lehet az életkörülmények, a kimerültség, a munkahelyi körülmények vagy más kötelezettségek, például a család, a gyerekek, a munka és a tanulás. A közösségi média és az okostelefonok használata is hatással lehet Ön és partnere interakciójára. Ezek a problémák felerősödhetnek, ha egy pár úgy dönt, hogy együtt élnek, összeházasodnak vagy gyermeket vállalnak. Ezek a körülmények rengeteg többletigényt támasztanak, amelyek minden bizonnyal hatással lesznek a kapcsolatra.</p>
                   </div>
                   <div ref={btnWrapperRef1} className="btn-wrapper">
                     <Link to="/parterapia" className="btnlink" target="_blank">
@@ -198,6 +201,9 @@ export default function LandingPage() {
                       <span>BŐVEBBEN</span>
                       <i className="fa-solid fa-arrow-right"></i>
                     </Link>
+                  </div>
+                  <div className="o-img p-15">
+                  <img src={ParTerapia} className="img-cover1 object-contain" alt="párterápia"/>
                   </div>  
                 </div>
               </div>
@@ -314,9 +320,9 @@ export default function LandingPage() {
                     volt. A párom szkeptikus volt, de a mai napig azt állítja, hogy ez életünk egyik nagyon jó döntése
                     volt. Mindketten úgy gondoljuk, hogy a terápia nélkül nem lett volna biztos az Újra kezdés, nem
                     jött volna rendbe a házasságunk. Nem csak egymást ismertük meg még jobban, de saját magunknak is
-                    okoztunk meglepetés. Rögös volt az út, de úgy hisszük, hogy most már sínen vagyunk!
+                    okoztunk meglepetés. Rögös volt az út, de úgy hisszük, hogy most már sínen vagyunk! Köszönjük Gabi!
                   </p>
-                  <p className="body-4 pre-wrap-text">Köszönjük Gabi!</p>
+                  
                 </div>
 
                 <div className="content-card">

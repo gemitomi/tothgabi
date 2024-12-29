@@ -30,8 +30,12 @@ import AskHelp from "../image/segitseg-keres.jpg"
                     <h2 className="title-1 faco-title pretitle">Családterápia</h2>
                   </div>
                   <div className="faco-text">
-                    <p className="body-4 pre-wrap-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Volupt molestiae assumenda? Veritatis volup cum totam incidunt nesciunt doloribus perspici velit explicabo odit distinctio commodi odio.</p>    
-                    <p className="body-4 pre-wrap-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, inventore!</p>
+                    <p className="body-4 pre-wrap-text">A családterápia azokkal a problémákkal foglalkozik, amelyekkel az emberek az életükben jelentősszemélyekkel való kapcsolataik és a közösségi hálózataik összefüggésében jelentkeznek. Elsősorban a családi rendszerre, mint társadalmi egységre vonatkozik, ellentétben más pszichoterápiás megközelítésekkel, mint például a pszichodinamikus vagy a kognitív-viselkedési terápia, amelyek az egyénre összpontosítanak. A családterápia heterogén terület; különböző iskolák és modellek léteznek, amelyek több alapelvet és vezérlő feltevést osztanak. A családterápia céljai közé tartozhat például: a család működésének javítása különböző szinteken, a kölcsönös megértés és érzelmi támogatás erősítése a családtagok között, a megküzdési készségek és problémamegoldó stratégiák fejlesztése különböző életdilemmákban és helyzetekben.</p>    
+                    <p className="body-4 pre-wrap-text">A családterápia „rendszerszintű feltételezéseken” vagy „kontextuális perspektíván” alapul, amelyek a tágabb rendszerek szerepét hangsúlyozzák, mint például a közösség, a társadalom és a kultúra, amelyhez a család tartozik.</p>
+                    <p className="body-4 pre-wrap-text">A rendszerszemlélet az egyén problémáit azokhoz a különböző kontextusokhoz viszonyítva szemléli, amelyekben az egyén él: azaz párkapcsolati partnerként, családtagként, sajátos kultúrájú személyként.</p>
+                    <p className="body-4 pre-wrap-text">Egy családterápiás foglalkozás 90 percig tart; az ülések közötti intervallumok egy héttől több hétig terjednek a felmerülő problémáktól, a családtagok igényeitől, a kezelés stádiumától és egyéb változóktól függően. Bár nehéz megbecsülni, és nagyon eltérő, a családterápiás kezelés átlagos hossza 6-20 alkalom között mozog, de fontos, hogy a terapeuta és a család közötti együttműködés és kölcsönös megállapodás eredménye.</p>
+                    <p className="body-4 pre-wrap-text">A leggyakrabban egynél több családtaggal dolgozom egy alkalommal, de adott esetben egyéni foglalkozásokat vagy például a gyerekektől különálló szülőkkel való találkozókat is kínálok. A családterápia néhány modellje magában foglalja a társterapeutával való közös munkát.</p>
+                    <p className="body-4 pre-wrap-text">A családterápia lehetővé teszi a családtagok számára, hogy biztonságosan fejezzék ki és fedezzék fel nehéz gondolataikat és érzelmeiket, megértsék egymás tapasztalatait és nézeteit, értékeljék egymás szükségleteit, építsenek a család erősségeire, és hasznos változtatásokat hajtsanak végre kapcsolataikban és életükben.</p>
                   </div>
                 </div>
               </div>
@@ -57,9 +61,8 @@ import AskHelp from "../image/segitseg-keres.jpg"
                       </div>
                       <div className="text-wrapper">
                         <p className="body-4 c-how-text">
-                          <strong>Lorem ipsum dolor</strong>
-                          Sit amet consectetur adipisicing elit.</p> 
-                                            
+                          <strong>A családközpontú munka</strong>
+                          fontos eszköze a különféle problémák megelőzésének, amelyek komoly terhet jelenthetnek a családok számára.</p>                 
                       </div>
                     </div>
 
@@ -69,7 +72,7 @@ import AskHelp from "../image/segitseg-keres.jpg"
                       </div>
                       <div className="text-wrapper">
                         <p className="body-4 c-how-text">
-                          <strong>Lorem ipsum</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aliasgades lop percept fat hors.</p>                                     
+                          <strong>A családterápia rendkívül hatékony megközelítésnek számít</strong> a gyermek- és serdülőkor különböző érzelmi és viselkedési problémáinak megelőzésében és kezelésében.</p>                                     
                       </div>
                     </div>
 
@@ -79,19 +82,9 @@ import AskHelp from "../image/segitseg-keres.jpg"
                       </div>
                       <div className="text-wrapper">
                         <p className="body-4 c-how-text">
-                          <strong>Lorem ipsum dolor sit amet.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aliasgades lop percept fat hors.</p>                                     
+                          <strong>A családterápia segíthet</strong> a családtagoknak abban, hogy saját erőforrásaikat felhasználva támogassák egymást különböző stresszhelyzetekben, beleértve a mentális és fizikai betegségeket is.</p>                                     
                       </div>
                     </div>
-
-                    <div className="c-content-m">
-                      <div className="check-img-content">
-                        <img className="check-img" src={Check01} alt="check"/>
-                      </div>
-                      <div className="text-wrapper">
-                        <p className="body-4 c-how-text">
-                          <strong>Lorem ipsum dolor sit amet.</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, aliasgades lop percept fat hors.</p>                                     
-                      </div>
-                    </div> 
                   </div>
                 </div>
 

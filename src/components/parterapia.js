@@ -25,7 +25,10 @@ export default function parterapia() {
                   <h2 className="title-1 faco-title pretitle">Párterápia</h2>
                 </div>
                 <div className="faco-text">
-                  <p className="body-4 pre-wrap-text">A párterápia, a kapcsolat egészségének kulcsfontosságú eleme, célja, hogy segítsen a pároknak felismerni és megoldani a konfliktusokat a kapcsolatuk javítása érdekében.</p>
+                  <p className="body-4 pre-wrap-text">A kapcsolatok kihívást jelenthetnek, ez nem kétséges. Egy kapcsolat soha nem lesz könnyű, az út során biztosan át kell vészelnie néhány zökkenőt.</p>
+                  <p className="body-4 pre-wrap-text">A kapcsolat egy pontján azon kaphatja magátt, hogy eltávolodik a partnerétől – ennek oka lehet az életkörülmények, a kimerültség, a munkahelyi körülmények vagy más kötelezettségek, például a család, a gyerekek, a munka és a tanulás. A közösségi média és az okostelefonok használata is hatással lehet Ön és partnere interakciójára. Ezek a problémák felerősödhetnek, ha egy pár úgy dönt, hogy együtt élnek, összeházasodnak vagy gyermeket vállalnak. Ezek a körülmények rengeteg többletigényt támasztanak, amelyek minden bizonnyal hatással lesznek a kapcsolatra.</p>
+                  <p className="body-4 pre-wrap-text">Még ha a kapcsolata elvesztette is az intimitását, vagy többet veszekszik, mint valaha – ez nem jelenti azt, hogy a dolgoknak teljesen vége, vagy nem érdemes megmenteni. Ne feledje, okkal választotta partnerét. A párkapcsolati döntések az életünk legnagyobb döntései közé tartoznak, és megalkotásuk időt és erőfeszítést igényel.</p>
+                  <p className="body-4 pre-wrap-text">Ha nehézségeket tapasztal a kapcsolatában, először megpróbálhatja feloldani a feszültségeket és a problémákat egymás között. Ha ez a módszer nem bizonyul sikeresnek, akkor érdemes szakember segítségét kérni, és párterápián részt venni.</p>
                   <p className="body-4 pre-wrap-text"></p>
                 </div>
               </div>
@@ -40,7 +43,7 @@ export default function parterapia() {
             <div className="faco-content grid grid-lg gap-12">               
               <div className="faco-left flex flex-col">
                 <div className="famco-text">
-                  <p className="title-1 famco-title pretitle">A terápia céljai</p>
+                  <p className="title-1 famco-title pretitle">Számos okból dönthet úgy, hogy szakemberhez fordul:</p>
                 </div>
 
                 <div className="c-text-inner">
@@ -50,10 +53,7 @@ export default function parterapia() {
                       <img className="check-img" src={Check01} alt="check"/>
                     </div>
                     <div className="text-wrapper">
-                      <p className="body-4 c-how-text">
-                        <strong>A kommunikáció javítása:</strong>
-                      A terápia segíti a párokat abban, hogy egészségesebb kommunikációs stilus alakítsanak ki egymás irányában.</p> 
-                                          
+                      <p className="body-4 c-how-text">Viták, veszekedések és más egészségtelen kapcsolati dinamikák megoldása érdekében.</p>                    
                     </div>
                   </div>
 
@@ -62,9 +62,7 @@ export default function parterapia() {
                       <img className="check-img" src={Check01} alt="check"/>
                     </div>
                     <div className="text-wrapper">
-                      <p className="body-4 c-how-text">                                     
-                      <strong>A konfliktusok megoldása:</strong>
-                    </p>
+                      <p className="body-4 c-how-text">A szexuális kapcsolat vagy az intimitás elvesztése miatt.</p>
                     </div>
                   </div>
 
@@ -73,9 +71,7 @@ export default function parterapia() {
                       <img className="check-img" src={Check01} alt="check"/>
                     </div>
                     <div className="text-wrapper">
-                      <p className="body-4 c-how-text">
-                        <strong>A kapcsolatok erősítése:</strong>
-                      </p>                                     
+                      <p className="body-4 c-how-text">Az akut válságok vagy váratlan konfliktusok feloldása érdekében.</p>                                    
                     </div>
                   </div>
 
@@ -84,8 +80,7 @@ export default function parterapia() {
                       <img className="check-img" src={Check01} alt="check"/>
                     </div>
                     <div className="text-wrapper">
-                      <p className="body-4 c-how-text">
-                        <strong>A személyes növekedés elősegítése:</strong></p>                                     
+                      <p className="body-4 c-how-text">Mert úgy döntöttek, hogy véget vetnek kapcsolatuknak, de a lehető legjobb feltételekkel szeretnék megtenni azt.</p>                                     
                     </div>
                   </div> 
                 </div>

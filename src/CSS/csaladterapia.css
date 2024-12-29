@@ -3,7 +3,7 @@
       FAMILY FIRST START
 \*-----------------------------------*/
   
-
+/*
 .section-faco{
 --section-padding: 10em;
   margin-top: 15em;
@@ -43,9 +43,9 @@
   justify-content: center;
 }
 
+*/
 
-
-/*szöveg alatti vonal*/
+/*szöveg alatti vonal
 .section-faco .faco-title:after{
   content:"";
   width: 100%;
@@ -63,7 +63,7 @@
   padding: 2rem 1rem;
   text-align: left;
 }
-
+*/
 
 /*-----------------------------------*\
       FAMILY FIRST END
@@ -365,10 +365,10 @@
   background: radial-gradient(#bcd9c9, #b1cbbd, #8ca99c);
 }
 */
-
+/*
 .price-bg{
   position: relative;
-  background-image: url(../image/service-background-1.svg); /* A háttérkép URL-je */
+  background-image: url(../image/service-background-1.svg);  A háttérkép URL-je 
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -399,8 +399,9 @@
   font-weight: 700;
   color: var(--primaryButtonBgColor);
 }
-
+*/
 /*Jobb oldali oszlop*/
+/*
 .plan{
   position: relative;
   align-items: center;
@@ -527,7 +528,7 @@ hr{
   margin-right: 8px;
   transform: translateY(2px);
 }
-  
+*/  
     
 /*-----------------------------------*\
   PRICES END

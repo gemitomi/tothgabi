@@ -128,14 +128,19 @@ form{
       border: none;
       cursor: pointer;
       transition: 0.5s ease;
+      justify-content: center;
 }
     
 .contact-input-box .send-btn:hover{
       background: var(--orange-h);
       color: var(--primaryButtonBgColor);
 }
-    
-    
+
+@media (max-width: 768px){
+      .contact-input-box .send-btn{
+      width: 30%; 
+      }
+}  
 /*-----------------------------------*\
  CONTACT END
 \*-----------------------------------*/
