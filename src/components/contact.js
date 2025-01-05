@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import "../CSS/kapcsolat.css"
 
@@ -18,21 +19,21 @@ export default function contact() {
                 <div className="box-container">
 
                   <div className="box flex ">
-                    <a href="#"><i className="fas fa-map"></i>Budapest, Budaörs</a>
+                    <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" target="_blank"><i className="fas fa-map"></i>Budapest, XXII. kerület</Link>
                   </div>
                   <div className="box flex">
-                    <a href="#"><i className="fas fa-envelope"></i>info@gabriellatoth.com</a>
+                     <Link to="mailto:ggabriella.toth@gmail.com"><i className="fas fa-envelope"></i>ggabriella.toth@gmail.com</Link>
                   </div>
                   <div className="box flex">
-                    <a href="#"><i className="fas fa-phone"></i>+36 70 576 4224</a>
+                    <Link to="tel:+36705764224"><i className="fas fa-phone"></i>+36 70 576 4224</Link>
                   </div>
                 
                 </div>
-                <div className="share">
+                {/* <div className="share">
                   <a href="#" className="fab fa-facebook-f"></a>
                   <a href="#" className="fab fa-instagram"></a>
                   <a href="#" className="fab fa-linkedin"></a>
-                </div>
+                </div> */}
               </div>
 
               <form action="mail.php" method="POST">

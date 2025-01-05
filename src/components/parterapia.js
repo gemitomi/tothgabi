@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../CSS/parterapia.css";
 
 import Check01 from "../image/check-1.png"
@@ -6,6 +7,7 @@ import Check02 from "../image/check-2.png"
 import Check03 from "../image/check-3.png"
 import Check04 from "../image/check-4.png"
 import ParTerapia from "../image/parterapia-2.png"
+import ParTerapia02 from "../image/parterapia_02.png"
 import AskHelp from "../image/segitseg-keres.jpg"
 
 export default function parterapia() {
@@ -15,22 +17,25 @@ export default function parterapia() {
         <div className="container py-16 m-0">
           <div className="faco-content-wrapper m-0">
             <div className="faco-content grid grid-lg gap-12">
+
               <div className="faco-left flex flex-col">
                 <div className="faco-block-content">
                   <h2 className="title-3 pre-wrap-text">"A párokkal azon dolgozom, hogy megoldják a kapcsolati problémáikat, javítsák a kommunikációt, és újra megtalálják a közös utat."</h2>
                 </div>
               </div>
+
               <div className="faco-right flex flex-col">
                 <div className="faco-block-content">
-                  <h2 className="title-1 faco-title pretitle">Párterápia</h2>
-                </div>
-                <div className="faco-text">
+                  <h2 className=" faco-title pretitle">Párterápia</h2>
+                  <div className="faco-text">
                   <p className="body-4 pre-wrap-text">A kapcsolatok kihívást jelenthetnek, ez nem kétséges. Egy kapcsolat soha nem lesz könnyű, az út során biztosan át kell vészelnie néhány zökkenőt.</p>
                   <p className="body-4 pre-wrap-text">A kapcsolat egy pontján azon kaphatja magátt, hogy eltávolodik a partnerétől – ennek oka lehet az életkörülmények, a kimerültség, a munkahelyi körülmények vagy más kötelezettségek, például a család, a gyerekek, a munka és a tanulás. A közösségi média és az okostelefonok használata is hatással lehet Ön és partnere interakciójára. Ezek a problémák felerősödhetnek, ha egy pár úgy dönt, hogy együtt élnek, összeházasodnak vagy gyermeket vállalnak. Ezek a körülmények rengeteg többletigényt támasztanak, amelyek minden bizonnyal hatással lesznek a kapcsolatra.</p>
                   <p className="body-4 pre-wrap-text">Még ha a kapcsolata elvesztette is az intimitását, vagy többet veszekszik, mint valaha – ez nem jelenti azt, hogy a dolgoknak teljesen vége, vagy nem érdemes megmenteni. Ne feledje, okkal választotta partnerét. A párkapcsolati döntések az életünk legnagyobb döntései közé tartoznak, és megalkotásuk időt és erőfeszítést igényel.</p>
                   <p className="body-4 pre-wrap-text">Ha nehézségeket tapasztal a kapcsolatában, először megpróbálhatja feloldani a feszültségeket és a problémákat egymás között. Ha ez a módszer nem bizonyul sikeresnek, akkor érdemes szakember segítségét kérni, és párterápián részt venni.</p>
                   <p className="body-4 pre-wrap-text"></p>
                 </div>
+                </div>
+                
               </div>
             </div>
           </div>
@@ -43,7 +48,7 @@ export default function parterapia() {
             <div className="faco-content grid grid-lg gap-12">               
               <div className="faco-left flex flex-col">
                 <div className="famco-text">
-                  <p className="title-1 famco-title pretitle">Számos okból dönthet úgy, hogy szakemberhez fordul:</p>
+                  <h2 className="title-2 famco-title pretitle">Számos okból dönthet úgy, hogy szakemberhez fordul:</h2>
                 </div>
 
                 <div className="c-text-inner">
@@ -93,6 +98,59 @@ export default function parterapia() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="section w-100 section-facot bg text-center">
+        <div className="container py-16 m-0">
+          <div className="faco-content-wrapper m-0">
+            <div className="faco-content grid grid-lg gap-12">
+              <div className="faco-left flex flex-col">
+                <div className="faco-d-img">
+                  <img src={ParTerapia02} className="img-cover object-contain" loading="lazy" alt="párterápia"/>
+                </div>
+              </div>
+
+              <div className="faco-right flex flex-col">
+                <div className="faco-block-content">
+                <p className="body-4 pre-wrap-text">A párkapcsolati tanácsadás új eszközöket, ötleteket és perspektívákat kínálhat, amelyek segítségével helyreállíthatja kapcsolatát. Ez a fajta terápia sikeresen segíthet abban, hogy újra meleg és szeretetteljes kapcsolat jöjjön létre partnerével. Családkonzulensként sokféleképpen segíthetek, ugyanakkor figyelemmel kísérem a fejlődést, közvetítek a konfliktusos helyzetekben és objektív visszajelzést adok.</p>
+                  
+                  <div className="famco-text">
+                    <h2 className="title-2 famco-title-0 pretitle">Miben segíthet a párterápia?</h2>
+                  </div>
+
+                  <div className="body-4">
+                    <ul className="help-list-p">
+                     <li className="h-list-has-before">Jobb kommunikáció kialakításában a partnerek között.</li>
+                      <li className="h-list-has-before">A problémák azonosításában és megoldásában biztonságos környezetben.</li>
+                      <li className="h-list-has-before">Egymás igényeinek meghallgatásában és megértésében harag, veszekedés nélkül.</li>
+                      <li className="h-list-has-before">Értékesebb és mélyebb kapcsolat kialakításában.</li>
+                      <li className="h-list-has-before">A testi és érzelmi intimitás megújításában.</li>
+                      <li className="h-list-has-before">A múlttól való eltávolodásban egy szebb jövő érdekében.</li>
+                      <li className="h-list-has-before">A saját és partnere igényeinek jobb megértésében.</li>
+                      <li className="h-list-has-before">Annak eldöntésében, hogy folytathatják-e kapcsolatukat vagy a házasságukat.</li> 
+                    </ul>
+                  </div>        
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section w-100 bg text-center">
+        <div className="container py-16 m-0">
+          <div className="col flex-col">
+            <div className="info-block-content">
+              <div className="info-title-couple">
+                <h2 className="title-3 pre-wrap-text">Mire számíthatnak a terápián?</h2>
+              </div>
+            </div>
+            <div className="info-text-couple">
+              <p className="body-4 pre-wrap-text">Egy párterápiás foglalkozás 90 percig tart; az ülések közötti intervallumok egy héttől több hétig terjednek a felmerülő problémáktól, a párok igényeitől, a kezelés stádiumától és egyéb változóktól függően. Bár nehéz megbecsülni, és nagyon eltérő, a párterápiás kezelés átlagos hossza 6-20 alkalom között mozog, de fontos, hogy a terapeuta és a pár közötti együttműködés és kölcsönös megállapodás eredménye.</p>
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -203,8 +261,8 @@ export default function parterapia() {
                           <path d="m4 12 8 8L28 4"></path>
                     </svg>
                     </span>
-                    Személyesen (&nbsp;
-                    <a className="underline text-underline" href="#">helyszínek</a>
+                     Személyesen (&nbsp;
+                    <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" className="underline text-underline" target="_blank">helyszínek</Link>
                     &nbsp;)
                     </p>
                     <p className="flex items-center body-4 mb-2">
@@ -244,8 +302,8 @@ export default function parterapia() {
                           <path d="m4 12 8 8L28 4"></path>
                         </svg>
                       </span>
-                        Személyesen (&nbsp;
-                        <a className="underline text-underline" href="#">helyszínek</a>
+                         Személyesen (&nbsp;
+                        <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" className="underline text-underline" target="_blank">helyszínek</Link>
                           &nbsp;)
                     </p>
                     <p className="flex items-center body-4 mb-2">

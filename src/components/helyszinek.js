@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 import Platina from "../image/Platina.jpg"
 import Place02 from "../image/helyszin-2.png"
@@ -68,8 +69,7 @@ gsap.registerPlugin(ScrollTrigger);
                   </div>
                   <h3 className="place-text">személyes konzultáció </h3>
                   <h2 className="body-3 card-title">Mozaikcsalád Központ (Budapest, XXII.)</h2>
-                  <p className="body-4 card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                  Tempora eos eveniet, magni, labore ipsam fugiat earum doloribus, 
+                  <p className="body-4 card-text"> 
                   </p>
 
                   <div className="place-info">
@@ -82,7 +82,7 @@ gsap.registerPlugin(ScrollTrigger);
                       </div>
 
                       <div className="cont-text">
-                        <a href="#" className="body-4 underline text-underline">1223 Budapest, Platina u. 1/1</a>
+                        <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" target="_blank" className="body-4 underline text-underline">1223 Budapest, Platina u. 1/1</Link>
                       </div>
                     </div>
 
@@ -112,62 +112,11 @@ gsap.registerPlugin(ScrollTrigger);
                 <div className="place-card">
 
                   <div className="card-img">
-                        <img src={Place02}  className="place-img img-cover" loading="lazy" alt="mozaikcsalád központ"/>
-                  </div>
-                    <h3 className="place-text">személyes konzultáció </h3>
-                    <h2 className="body-3 card-title">Pszichológiai Rendelő (Budapest, XIV.)</h2>
-                    <p className="body-4 card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                          Tempora eos eveniet, magni, labore ipsam fugiat earum doloribus, 
-                    </p>
-
-                    <div className="place-info">
-                      <div className="info-card flex mb-2">
-
-                        <div className="place-icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                          <path fill="none" stroke="#8ca99c" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M256 48c-79.5 0-144 61.39-144 137 0 87 96 224.87 131.25 272.49a15.77 15.77 0 0 0 25.5 0C304 409.89 400 272.07 400 185c0-75.61-64.5-137-144-137z"/><circle cx="256" cy="192" r="48" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32"/>
-                          </svg>
-                        </div>
-                        <div className="cont-text">
-                          <a href="#" className="body-4 underline text-underline">1142 Budapest, Dorozsmai utca 110.</a>
-                        </div>
-                      </div>
-
-                          
-
-                    <div className="info-card flex mb-2">
-                      <div className="place-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                        <path fill="none" stroke="#8ca99c" stroke-linecap="round" stroke-linejoin="round" stroke-width="36" d="M208 352h-64a96 96 0 0 1 0-192h64m96 0h64a96 96 0 0 1 0 192h-64m-140.71-96h187.42"/>
-                        </svg>
-                      </div>
-                      <div className="cont-text">
-                        <a href="http://almafa.hu" className="body-4">http://almafa.hu</a>
-                      </div>
-                    </div>
-                  </div>
-
-                      
-                  <div ref={btnWrapperRef1} className="btn-wrapper">
-                    <a href="#" className="btnlink" target="_blank" rel="noopener noreferrer">
-                      <div className="orange"></div>
-                      <span>Kérjen időpontot</span>
-                      <i className="fa-solid fa-arrow-right"></i>
-                    </a>
-                  </div> 
-                </div>
-              </li>
-
-              <li className="place-item">
-                <div className="place-card">
-
-                  <div className="card-img">
                         <img src={Place03}  className="place-img img-cover" loading="lazy" alt="mozaikcsalád központ"/>
                   </div>
                   <h3 className="place-text">online konzultáció </h3>
                   <h2 className="body-3 card-title"></h2>
-                  <p className="body-4 card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
-                        Tempora eos eveniet, magni, labore ipsam fugiat earum doloribus, 
+                  <p className="body-4 card-text"> 
                   </p>
 
                   <div className="place-info">

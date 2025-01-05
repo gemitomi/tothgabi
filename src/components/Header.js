@@ -1,17 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ProfilePic01 from "../image/Toth Gabriella_2.svg";
 import "../CSS/style.css";
 
 export default function Header() {
   // Az állapotok megfelelő inicializálása
   const [isNavActive, setIsNavActive] = useState(false); // Navigációs menü állapota
+  const [activeMenuItem, setActiveMenuItem] = useState(null);
+  const location = useLocation();
   const [isHeaderHidden, setIsHeaderHidden] = useState(false); // Fejléc elrejtése
   const [isBackTopVisible, setIsBackTopVisible] = useState(false); // Vissza a tetejére gomb
   const [isTopBarHidden, setIsTopBarHidden] = useState(false); // Topbar elrejtése
   const lastScrollPos = useRef(0); // Utolsó görgetési pozíció
   const headerRef = useRef(null); // Fejléc ref, hogy hivatkozhassunk rá
   const topBarRef = useRef(null); // Topbar ref
+  
 
   // Navigációs menü toggler
   const toggleNavbar = () => {
@@ -19,10 +22,10 @@ export default function Header() {
     document.body.classList.toggle("nav-active", !isNavActive); // A navigációs menü megnyitása/zárása
   };
 
-  const handleMenuItemClick = () => {
-    if (isNavActive) {
-      toggleNavbar(); // Csak akkor zárja be, ha a menü éppen nyitva van
-    }
+  const handleMenuItemClick = (menuItem) => {
+    setActiveMenuItem(menuItem); // Aktuális menüelem kiválasztása
+    setIsNavActive(false); // Menü bezárása
+    document.body.classList.remove("nav-active"); // A `nav-active` osztály eltávolítása
   };
 
   // Görgetés eseménykezelése
@@ -73,12 +76,7 @@ export default function Header() {
 
           <div className="separator"></div>
 
-          <address className="topbar-item">
-            <div className="icon">
-              <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
-            </div>
-            <span className="span">1142 Budapest, Dorozsmai utca 110.</span>
-          </address>
+          
 
           <div className="topbar-item item-2">
             <span className="span"></span>
@@ -97,7 +95,7 @@ export default function Header() {
             <div className="icon">
               <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </div>
-            <span className="span">info@gabriellatoth.com</span>
+            <span className="span">ggabriella.toth@gmail.com</span>
           </Link>
         </div>
       </div>
@@ -120,61 +118,47 @@ export default function Header() {
 
           {/* Navbar */}
           <nav className={`navbar ${isNavActive ? "active" : ""}`} data-navbar>
-            <button
-              className="close-btn"
-              aria-label="close menu"
-              onClick={toggleNavbar}
-            >
-              <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
-            </button>
+      <button
+        className="close-btn"
+        aria-label="close menu"
+        onClick={toggleNavbar}
+      >
+        <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+      </button>
 
-            <Link to="/" className="logo">
-              <img
-                src={ProfilePic01}
-                width="300"
-                height="50"
-                alt="Grilli - Home"
-              />
-            </Link>
+      <Link to="/" className="logo">
+        <img
+          src={ProfilePic01}
+          width="300"
+          height="50"
+          alt="Grilli - Home"
+        />
+      </Link>
 
-            <ul className="navbar-list">
-  <li className="navbar-item" onClick={handleMenuItemClick}>
-    <Link to="/" className="navbar-link hover-underline active">
-      <div className="separator"></div>
-      <span className="span">Főoldal</span>
-    </Link>
-  </li>
-  <li className="navbar-item" onClick={handleMenuItemClick}>
-    <Link to="/about" className="navbar-link hover-underline">
-      <div className="separator"></div>
-      <span className="span">Rólam</span>
-    </Link>
-  </li>
-  <li className="navbar-item" onClick={handleMenuItemClick}>
-    <Link to="/csaladterapia" className="navbar-link hover-underline">
-      <div className="separator"></div>
-      <span className="span">Családterápia</span>
-    </Link>
-  </li>
-  <li className="navbar-item" onClick={handleMenuItemClick}>
-    <Link to="/parterapia" className="navbar-link hover-underline">
-      <div className="separator"></div>
-      <span className="span">Párterápia</span>
-    </Link>
-  </li>
-  <li className="navbar-item" onClick={handleMenuItemClick}>
-    <Link to="/blog" className="navbar-link hover-underline">
-      <div className="separator"></div>
-      <span className="span">Blog</span>
-    </Link>
-  </li>
-  <li className="navbar-item" onClick={handleMenuItemClick}>
-    <Link to="/helyszinek" className="navbar-link hover-underline">
-      <div className="separator"></div>
-      <span className="span">Helyszínek</span>
-    </Link>
-  </li>
+      <ul className="navbar-list">
+  {[
+    { path: "/", label: "Főoldal" },
+    { path: "/about", label: "Rólam" },
+    { path: "/csaladterapia", label: "Családterápia" },
+    { path: "/parterapia", label: "Párterápia" },
+    { path: "/blog", label: "Blog" },
+    { path: "/helyszinek", label: "Helyszínek" },
+  ].map((item) => (
+    <li key={item.path} className="navbar-item">
+      <Link
+        to={item.path}
+        className={`navbar-link hover-underline ${
+          location.pathname === item.path ? "active" : ""
+        }`}
+        onClick={() => handleMenuItemClick(item.path)} // Hívja meg a handleMenuItemClick-et
+      >
+        <div className="separator"></div>
+        <span className="span">{item.label}</span>
+      </Link>
+    </li>
+  ))}
 </ul>
+
 
 
             <div className="text-center">

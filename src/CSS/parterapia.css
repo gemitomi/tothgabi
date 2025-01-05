@@ -1,6 +1,6 @@
 
 /*-----------------------------------*\
-      Couple FIRST START
+      COUPLE FIRST START
 \*-----------------------------------*/
   
 .section-faco{
@@ -11,7 +11,7 @@
   border-top-right-radius: 50px;
 }
 
-.famco-content-wrapper{
+.faco-content-wrapper{
   padding-top: calc(0vmax / 10);
   padding-bottom: calc(0vmax / 10);
   width: 100%;
@@ -23,45 +23,148 @@
 }
 
 .faco-block-content{
+  
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding-top: 1rem;
   text-align: left;
 }
 
-.section-faco .faco-title{
+
+.faco-title{
   position: relative;
   color: var(--primaryButtonBgColor);
   font-style: italic;
   letter-spacing: 0;
+  font-size: var(--fontSize-title-5);
   font-weight: 700;
-  margin-top: -1rem;  
+  margin-bottom: 1em;
   justify-content: center;
 }
 
 
 /*szöveg alatti vonal*/
+
 .section-faco .faco-title:after{
   content:"";
-  width: 100%;
+  width: 70%;
   min-height: 1px;
   position: absolute;
-  bottom: 10px;
-  left: 50%;
+  bottom: -20px;
+  left: 35%;
   transform: translateX(-50%);
   background: linear-gradient(to right,#003f5f, #bcd9c9);
 }
 
+
 .faco-text{
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 0;
   text-align: left;
 }
 
 /*-----------------------------------*\
-      FAMILY FIRST END
+      COUPLE FIRST END
 \*-----------------------------------*/
+
+
+/*-----------------------------------*\
+      COUPLE 3 SECTION START
+\*-----------------------------------*/
+
+
+.section-facot{
+  margin-top: 2em;
+  background: var(--background-b);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+/*bal oldali oszlop*/
+
+.faco-d-img{
+  position: relative;
+  padding: 0 3rem;
+}
+
+.faco-d-img img{
+  width: 100%;
+  margin-top: 1em;
+  border-radius: 8px;
+}
+
+@media (max-width: 900px){
+  .faco-d-img img{
+    display: none;
+  }
+}
+
+@media (max-width: 992px){
+  .faco-d-img img{
+   width: 50%;
+   margin: 0 auto;
+  }
+}
+
+/*bal oldali oszlop*/
+.famco-title-0{
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+  line-height: var(--lineHeight-2);
+  justify-content: center;
+}
+
+.help-list-p{
+  margin: 1em 1em;
+  padding-bottom: 2em;
+  display: grid;
+  grid-template-columns: 1fr;
+  list-style: none;
+}
+.help-list-p .h-list-has-before{
+  position: relative;
+  padding-inline-start: 20px;
+}
+
+.help-list-p .h-list-has-before:not(:last-child) {margin-block-end: 10px;}
+
+.help-list-p .h-list-has-before::before{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left:0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d93636;
+  background: linear-gradient(90deg, #d93636 20%, #f2a20c 100%);
+}
+/*-----------------------------------*\
+      COUPLE 3 SECTION END
+\*-----------------------------------*/
+
+
+
+/*-----------------------------------*\
+      COUPLE 4 SECTION START
+\*-----------------------------------*/
+
+.info-title-couple{
+  padding: 2em 2em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.info-text-couple{
+  text-align: left;
+}
+/*-----------------------------------*\
+      COUPLE 4 SECTION END
+\*-----------------------------------*/
+
 
 
 /*-----------------------------------*\
@@ -85,15 +188,12 @@
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.44);
   border-right-width: 0;
   border-radius: var(--radius-12);
-  
-  
 }
 
 .call-img-box img{
   border-style: none;
   max-width: 400px;
   height: auto;
-  
 }
   
 .call-block-content{

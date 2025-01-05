@@ -5,8 +5,7 @@ import "../CSS/rolam.css"
 
 import AboutProfile from "../image/hero-banner-gabi2.png"
 
-
-  gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedSection = () => {
   const btnWrapperRef = useRef(null);
@@ -85,7 +84,7 @@ const AnimatedSection = () => {
               <div class="hero-content">
                 <h2 class="headline-1 hero-t pre-wrap-text">Tóth Gabriella</h2>
                 <h3 class="title-2 hero-d pre-wrap-text">Pár- és családkonzulens</h3>
-                <h3 class="title-2 hero-d pre-wrap-text has-after">Képzésben lévő családterapeuta</h3>  
+                <h3 class="title-2 hero-d pre-wrap-text">Képzésben lévő családterapeuta</h3>  
                 <p class="body-4 hero-text pre-wrap-text">Tóth Gabriella, szociális munkás, családkonzulens és képzésben lévő családterapeuta vagyok. Tapasztalataimat elsősorban a családsegítő szolgálatban, családok átmeneti otthonában és magánrendelésemen szereztem, ahol sokféle kihívással találkozva fejleszthettem és finomíthattam szakmai készségeimet. Az emberi kapcsolatok, a családi dinamika és a pszichológia iránti érdeklődésem vezetett el a családterapeuta képzés felé, hogy még hatékonyabban és mélyebben segíthessek azoknak, akik hozzám fordulnak.</p>
                 <p class="body-4 hero-text pre-wrap-text">Munkám során arra törekszem, hogy segítsek az embereknek a kapcsolataikban rejlő erőforrások felfedezésében és azok megerősítésében, hogy közösen dolgozzanak ki hatékony megoldásokat a nehézségeikre. Támogatom a párokat és a családokat, hogy sikeresen oldják meg konfliktusaikat, kapcsolódjanak egymáshoz, megfelelő módon vezessék le az elakadást okozó feszültséget. Segítem őket abban, hogy felfedezzék saját történetüket, feltárják a visszatérő viselkedési mintázatokat és újra élvezhessék párkapcsolatukat, szülő-gyermek kapcsolatukat.</p>
                 <p class="body-4 hero-text pre-wrap-text">Rendszerszemléletben gondolkodom, dolgozom, ahol a családot és a párkapcsolatot egy egységként kezelem, figyelembe véve mindenkinek az egyéni szerepét és hozzájárulását. Hiszek abban, hogy a családtagok közötti kapcsolatok hatással vannak egymásra, és ezen kapcsolatok erősítése segíthet a nehézségek leküzdésében.</p>

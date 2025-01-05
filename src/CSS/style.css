@@ -316,7 +316,8 @@ address { font-style: normal; }
   transition: var(--transition-2);
 }
 
-.hover-underline:is(:hover, :focus-visible)::after {
+.hover-underline:is(:hover, :focus-visible)::after,
+.hover-underline.active::after {
   transform: scaleX(1);
   opacity: 1;
 }
@@ -1055,6 +1056,10 @@ header .header.active {
 }
 
 @media (max-width: 992px){
+  .hero {
+    margin-top: 9em;
+  }
+
   .hero .grid {
     grid-template-columns: 1fr;
     

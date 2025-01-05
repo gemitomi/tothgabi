@@ -200,7 +200,7 @@
   background-color: var(--primary);
   background-image: url(../image/citates-bg.png);
   background-attachment: fixed;
-  padding-top: 90px;
+  padding-top: 70px;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -226,7 +226,7 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  padding-top: 3.3vmax;
+  padding-top: .3vmax;
   padding-bottom: 3.3vmax;
   row-gap: 20px;
   width: 100%;

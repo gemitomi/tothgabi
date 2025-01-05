@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import "../CSS/csaladterapia.css"
 
 import Check01 from "../image/check-1.png"
@@ -7,8 +8,6 @@ import Check03 from "../image/check-3.png"
 import Check04 from "../image/check-4.png"
 import Therapy01 from "../image/family-therapy.png"
 import AskHelp from "../image/segitseg-keres.jpg"
-
-
   
   export default function Csaladterapia() {
   return (
@@ -16,9 +15,8 @@ import AskHelp from "../image/segitseg-keres.jpg"
     <section className="section w-100 section-faco bg text-center">
           <div className="container py-16 m-0">
             <div className="faco-content-wrapper m-0">
-           
-              <div className="family-content grid grid-lg gap-12">
-               
+              <div className="faco-content grid grid-lg gap-12">
+
                 <div className="faco-left flex flex-col">
                   <div className="faco-block-content">
                     <h2 className="title-3 pre-wrap-text">A család az első helyen áll minden körülmények között</h2>
@@ -27,16 +25,17 @@ import AskHelp from "../image/segitseg-keres.jpg"
                 
                 <div className="faco-right flex flex-col">
                   <div className="faco-block-content">
-                    <h2 className="title-1 faco-title pretitle">Családterápia</h2>
+                    <h2 className="faco-title">Családterápia</h2>
+                      <div className="faco-text">
+                      <p className="body-4 pre-wrap-text">A családterápia azokkal a problémákkal foglalkozik, amelyekkel az emberek az életükben jelentősszemélyekkel való kapcsolataik és a közösségi hálózataik összefüggésében jelentkeznek. Elsősorban a családi rendszerre, mint társadalmi egységre vonatkozik, ellentétben más pszichoterápiás megközelítésekkel, mint például a pszichodinamikus vagy a kognitív-viselkedési terápia, amelyek az egyénre összpontosítanak. A családterápia heterogén terület; különböző iskolák és modellek léteznek, amelyek több alapelvet és vezérlő feltevést osztanak. A családterápia céljai közé tartozhat például: a család működésének javítása különböző szinteken, a kölcsönös megértés és érzelmi támogatás erősítése a családtagok között, a megküzdési készségek és problémamegoldó stratégiák fejlesztése különböző életdilemmákban és helyzetekben.</p>    
+                      <p className="body-4 pre-wrap-text">A családterápia „rendszerszintű feltételezéseken” vagy „kontextuális perspektíván” alapul, amelyek a tágabb rendszerek szerepét hangsúlyozzák, mint például a közösség, a társadalom és a kultúra, amelyhez a család tartozik.</p>
+                      <p className="body-4 pre-wrap-text">A rendszerszemlélet az egyén problémáit azokhoz a különböző kontextusokhoz viszonyítva szemléli, amelyekben az egyén él: azaz párkapcsolati partnerként, családtagként, sajátos kultúrájú személyként.</p>
+                      <p className="body-4 pre-wrap-text">Egy családterápiás foglalkozás 90 percig tart; az ülések közötti intervallumok egy héttől több hétig terjednek a felmerülő problémáktól, a családtagok igényeitől, a kezelés stádiumától és egyéb változóktól függően. Bár nehéz megbecsülni, és nagyon eltérő, a családterápiás kezelés átlagos hossza 6-20 alkalom között mozog, de fontos, hogy a terapeuta és a család közötti együttműködés és kölcsönös megállapodás eredménye.</p>
+                      <p className="body-4 pre-wrap-text">A leggyakrabban egynél több családtaggal dolgozom egy alkalommal, de adott esetben egyéni foglalkozásokat vagy például a gyerekektől különálló szülőkkel való találkozókat is kínálok. A családterápia néhány modellje magában foglalja a társterapeutával való közös munkát.</p>
+                      <p className="body-4 pre-wrap-text">A családterápia lehetővé teszi a családtagok számára, hogy biztonságosan fejezzék ki és fedezzék fel nehéz gondolataikat és érzelmeiket, megértsék egymás tapasztalatait és nézeteit, értékeljék egymás szükségleteit, építsenek a család erősségeire, és hasznos változtatásokat hajtsanak végre kapcsolataikban és életükben.</p>
+                    </div>
                   </div>
-                  <div className="faco-text">
-                    <p className="body-4 pre-wrap-text">A családterápia azokkal a problémákkal foglalkozik, amelyekkel az emberek az életükben jelentősszemélyekkel való kapcsolataik és a közösségi hálózataik összefüggésében jelentkeznek. Elsősorban a családi rendszerre, mint társadalmi egységre vonatkozik, ellentétben más pszichoterápiás megközelítésekkel, mint például a pszichodinamikus vagy a kognitív-viselkedési terápia, amelyek az egyénre összpontosítanak. A családterápia heterogén terület; különböző iskolák és modellek léteznek, amelyek több alapelvet és vezérlő feltevést osztanak. A családterápia céljai közé tartozhat például: a család működésének javítása különböző szinteken, a kölcsönös megértés és érzelmi támogatás erősítése a családtagok között, a megküzdési készségek és problémamegoldó stratégiák fejlesztése különböző életdilemmákban és helyzetekben.</p>    
-                    <p className="body-4 pre-wrap-text">A családterápia „rendszerszintű feltételezéseken” vagy „kontextuális perspektíván” alapul, amelyek a tágabb rendszerek szerepét hangsúlyozzák, mint például a közösség, a társadalom és a kultúra, amelyhez a család tartozik.</p>
-                    <p className="body-4 pre-wrap-text">A rendszerszemlélet az egyén problémáit azokhoz a különböző kontextusokhoz viszonyítva szemléli, amelyekben az egyén él: azaz párkapcsolati partnerként, családtagként, sajátos kultúrájú személyként.</p>
-                    <p className="body-4 pre-wrap-text">Egy családterápiás foglalkozás 90 percig tart; az ülések közötti intervallumok egy héttől több hétig terjednek a felmerülő problémáktól, a családtagok igényeitől, a kezelés stádiumától és egyéb változóktól függően. Bár nehéz megbecsülni, és nagyon eltérő, a családterápiás kezelés átlagos hossza 6-20 alkalom között mozog, de fontos, hogy a terapeuta és a család közötti együttműködés és kölcsönös megállapodás eredménye.</p>
-                    <p className="body-4 pre-wrap-text">A leggyakrabban egynél több családtaggal dolgozom egy alkalommal, de adott esetben egyéni foglalkozásokat vagy például a gyerekektől különálló szülőkkel való találkozókat is kínálok. A családterápia néhány modellje magában foglalja a társterapeutával való közös munkát.</p>
-                    <p className="body-4 pre-wrap-text">A családterápia lehetővé teszi a családtagok számára, hogy biztonságosan fejezzék ki és fedezzék fel nehéz gondolataikat és érzelmeiket, megértsék egymás tapasztalatait és nézeteit, értékeljék egymás szükségleteit, építsenek a család erősségeire, és hasznos változtatásokat hajtsanak végre kapcsolataikban és életükben.</p>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -50,7 +49,7 @@ import AskHelp from "../image/segitseg-keres.jpg"
              
                 <div className="faco-left flex flex-col">
                   <div className="famco-text">
-                    <p className="title-1 famco-title pretitle">Milyen esetekben ajánlott a családterápia?</p>
+                    <p className="title-2 famco-title pretitle">Milyen esetekben ajánlott a családterápia?</p>
                   </div>
 
                   <div className="c-text-inner">
@@ -109,7 +108,6 @@ import AskHelp from "../image/segitseg-keres.jpg"
     
         <section className="section w-100 call-section text-center">
           <div className="container flex py-16 m-0">
-
             <div className="grid grid-xl gap-12">
               <div className="call-block">
                 <img  src={AskHelp} className="call-img-box" alt=""/>
@@ -124,7 +122,6 @@ import AskHelp from "../image/segitseg-keres.jpg"
               </div>
             </div>
           </div>
-
         </section>
 
         <section className="section w-100 price-bg  text-center" id="price">
@@ -139,22 +136,18 @@ import AskHelp from "../image/segitseg-keres.jpg"
             120,2880,120C2760,120,2640,120,2520,120C2400,120,2280,120,2160,120C2040,120,1920,120,1800,120C1680,120,1560,120,1440,120C1320,120,1200,120,1080,120C960,
             120,840,120,720,120C600,120,480,120,360,120C240,120,120,120,60,120L0,120Z"></path></svg>
           <div className="container flex py-16 m-0 prices">
-      
             <div className="grid grid-xl gap-12 prices-pad m-0">
-              
               <div className="prices-wrap flex flex-col">
                 <div className="time-text">
                   <h2 className="title-1 time pre-wrap-text">Időpontfoglalás menete</h2>
                 </div>
-                <div className="c-text-inner">
-                  
+                <div className="c-text-inner"> 
                   <div className="c-content-m">
                     <div className="check-img-content">
                       <img className="check-img" src={Check02} alt="check"/>
                     </div>
                     <div className="text-wrapper">
-                      <p className="body-4 c-how-text pre-wrap-text">Telefonon vagy e-mailben vegye fel velem a kapcsolatot, melynek során megbeszéljük, hogyan tudok segíteni.</p> 
-                                          
+                      <p className="body-4 c-how-text pre-wrap-text">Telefonon vagy e-mailben vegye fel velem a kapcsolatot, melynek során megbeszéljük, hogyan tudok segíteni.</p>                                        
                     </div>
                   </div>
 
@@ -163,17 +156,16 @@ import AskHelp from "../image/segitseg-keres.jpg"
                       <img className="check-img" src={Check03} alt="check"/>
                     </div>
                     <div className="text-wrapper">
-                      <p className="body-4 c-how-text pre-wrap-text">Megbeszéljük a részleteket, és kölcsönösen megegyezünk az első alkalom időpontjában és helyszínében.</p> 
-                                          
+                      <p className="body-4 c-how-text pre-wrap-text">Megbeszéljük a részleteket, és kölcsönösen megegyezünk az első alkalom időpontjában és helyszínében.</p>                                 
                     </div>
                   </div>
+
                   <div className="c-content-m">
                     <div className="check-img-content">
                       <img className="check-img" src={Check04} alt="check"/>
                     </div>
                     <div className="text-wrapper">
-                      <p className="body-4 c-how-text pre-wrap-text">A megbeszélt időpontokat legkésőbb 24 órával a kezdés előtt lehet lemondani, ellenkező esetben az alkalom megtartottnak minősül.</p> 
-                                          
+                      <p className="body-4 c-how-text pre-wrap-text">A megbeszélt időpontokat legkésőbb 24 órával a kezdés előtt lehet lemondani, ellenkező esetben az alkalom megtartottnak minősül.</p>                    
                     </div>
                   </div>
                 </div>
@@ -182,54 +174,52 @@ import AskHelp from "../image/segitseg-keres.jpg"
               <div className="plan">
                 <div className="plan-wrap gap-12">
                   <div id="price-couple" className="price-card">
-                        <div className="plan-details">
-                              <div className="plan-name">
-                              <h2>
-                              <strong>CSALÁDTERÁPIA</strong>
-                              </h2>
-                              </div>
-                              <p className="plan-save">EGYÉNI VEZETÉSSEL</p>
-                        </div>
-                        <div className="the-price">
-                              <h1 className="price-1 flex">
-                              <span className="body-1 green">23.000 Ft </span>
-                              <span className="body-3 grau">/alkalom </span>
-                              </h1>
-                        </div>
-                        <hr/>
-                        <div className="the-details">
-                              
-                              <p className="flex items-center body-4 mb-2">
-                              <span className="online">
-                              <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
-                                    <path d="m4 12 8 8L28 4"></path>
-                              </svg>
-                              </span>
-                              Személyesen (&nbsp;
-                              <a className="underline text-underline" href="#">helyszínek</a>
-                              &nbsp;)
-                              </p>
-                              <p className="flex items-center body-4 mb-2">
-                              <span className="online">
-                              <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
-                                    <path d="m4 12 8 8L28 4"></path>
-                              </svg>
-                              </span>
-                              90 perc
-                              /alkalom
-                              </p>
-      
-                        </div>
+                    <div className="plan-details">
+                      <div className="plan-name">
+                      <h2>
+                      <strong>CSALÁDTERÁPIA</strong>
+                      </h2>
+                      </div>
+                      <p className="plan-save">EGYÉNI VEZETÉSSEL</p>
+                    </div>
+                    <div className="the-price">
+                      <h1 className="price-1 flex">
+                      <span className="body-1 green">23.000 Ft </span>
+                      <span className="body-3 grau">/alkalom </span>
+                      </h1>
+                    </div>
+                    <hr/>
+                    <div className="the-details">                        
+                      <p className="flex items-center body-4 mb-2">
+                        <span className="online">
+                          <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
+                                <path d="m4 12 8 8L28 4"></path>
+                          </svg>
+                        </span>
+                        Személyesen (&nbsp;
+                        <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" className="underline text-underline" target="_blank">helyszínek</Link>
+                        &nbsp;)
+                      </p>
+                      <p className="flex items-center body-4 mb-2">
+                        <span className="online">
+                          <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
+                            <path d="m4 12 8 8L28 4"></path>
+                          </svg>
+                        </span>
+                        90 perc
+                        /alkalom
+                      </p> 
+                    </div>
                   </div>
       
                   <div id="price-co" className="price-card">
                     <div className="plan-details">
-                              <div className="plan-name">
-                              <h2>
-                              <strong>CSALÁDTERÁPIA</strong>
-                              </h2>
-                              </div>
-                              <p className="plan-save">CO-TERAPEUTÁVAL</p>
+                      <div className="plan-name">
+                      <h2>
+                      <strong>CSALÁDTERÁPIA</strong>
+                      </h2>
+                      </div>
+                      <p className="plan-save">CO-TERAPEUTÁVAL</p>
                     </div>
                     <div className="the-price">
                       <h1 className="price-1 flex">
@@ -239,7 +229,6 @@ import AskHelp from "../image/segitseg-keres.jpg"
                     </div>
                     <hr/>
                     <div className="the-details">
-                      
                       <p className="flex items-center body-4 mb-2">
                         <span className="online">
                           <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
@@ -247,8 +236,8 @@ import AskHelp from "../image/segitseg-keres.jpg"
                           </svg>
                         </span>
                           Személyesen (&nbsp;
-                          <a className="underline text-underline" href="#">helyszínek</a>
-                            &nbsp;)
+                          <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" className="underline text-underline" target="_blank">helyszínek</Link>
+                          &nbsp;)
                       </p>
                       <p className="flex items-center body-4 mb-2">
                         <span className="online">
@@ -318,6 +307,4 @@ import AskHelp from "../image/segitseg-keres.jpg"
         </a>
         </div>
   )
-  
 }
-/*export default AnimatedSection;*/

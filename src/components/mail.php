@@ -48,11 +48,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
                     <p>Kérem erre az üzenetre ne válaszoljon.</p> <br>
                    
                     <p>Üdvözlettel: <br><br>
-                    <img src='https://gemeterzsuzsa.hu/static/media/signature.JPG' alt='Aláírás'></p>
+                   </p>
                 </body>
             </html>
             ";
-            $confirmationHeaders = "From: no-reply@gabriellatoth.com\r\n";
+            $confirmationHeaders = "From: no-reply_ggabriella.toth@gmail.com\r\n";
             $confirmationHeaders .= "MIME-Version: 1.0\r\n";
             $confirmationHeaders .= "Content-type: text/html; charset=UTF-8\r\n";
 

@@ -312,7 +312,7 @@ export default function LandingPage() {
                 <div className="content-card">
                   <div className="testimonal-profile">
                     <img src={Citates01} alt="idézőjel" />
-                    <p className="body-2 first-t">P. Anna.</p>
+                    <p className="body-2 first-t">Julianna</p>
                   </div>
                   <p className="body-4 pre-wrap-text">
                     2022. Tavaszán, 16 év után felfordulás az életünk és válságba került a házasságunk. Úgy éreztem,
@@ -328,7 +328,7 @@ export default function LandingPage() {
                 <div className="content-card">
                   <div className="testimonal-profile">
                     <img src={Citates01} className="" alt="idézőjel" />
-                    <p className="body-2 first-t">L. Dóra.</p>
+                    <p className="body-2 first-t">Judit</p>
                   </div>
                   <p className="body-4 pre-wrap-text">
                     Gabriellával akkor találkoztunk, amikor kis családunknak arra a legnagyobb szüksége volt. Személyében
@@ -354,8 +354,6 @@ export default function LandingPage() {
     </div>
       </section>
 
-     
-      
       <section className="section w-100 contact text-center" aria-label="">
         <div className="contacts">
           <div className="container py-16 m-0">
@@ -369,21 +367,21 @@ export default function LandingPage() {
                 <div className="box-container">
 
                   <div className="box flex ">
-                    <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" target="_blank"><i className="fas fa-map"></i>Budapest,</Link><Link to="http://maps.google.com/?q=Budaörs+napsugar+setany+4" target="_blank"> Budaörs</Link>
+                    <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" target="_blank"><i className="fas fa-map"></i>Budapest, XXII. kerület</Link>
                   </div>
                   <div className="box flex">
-                    <Link to="mailto:info@gabriellatoth.com"><i className="fas fa-envelope"></i>info@gabriellatoth.com</Link>
+                    <Link to="mailto:ggabriella.toth@gmail.com"><i className="fas fa-envelope"></i>ggabriella.toth@gmail.com</Link>
                   </div>
                   <div className="box flex">
-                    <Link to="#"><i className="fas fa-phone"></i>+36 70 576 4224</Link>
+                    <Link to="tel:+36705764224"><i className="fas fa-phone"></i>+36 70 576 4224</Link>
                   </div>
                   
                 </div>
-                <div className="share">
+                {/* <div className="share">
                   <Link to="#" className="fab fa-facebook-f"></Link>
                   <Link to="#" className="fab fa-instagram"></Link>
                   <Link to="#" className="fab fa-linkedin"></Link>
-                </div>
+                </div> */}
               </div>
               
               <form action="mail.php" method="POST">
