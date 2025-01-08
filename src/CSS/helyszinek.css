@@ -36,13 +36,13 @@
 
 .place-box{
   width: 100%;
-  padding: 1rem;
+  padding: 2rem;
 }
     
 .grid-place { 
   display: grid;
   gap: 3rem;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-content: center;
 }
     
@@ -63,21 +63,28 @@
 
 
 .place-card { 
-  height: 650px;
+  height: 750px;
   padding: 30px 20px 40px; 
   border: .5px solid var(--gray);
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-2);
 }
 
-@media (max-width: 768px){
+@media (max-width: 1120px){
   .place-card{
-    height: max-content;
+    height: 620px;
   }
   .place-card .card-img{
     width: 100%;
   }
 }
+
+@media (max-width: 988px){
+  .place-card{
+    height: 300px;
+  }
+}
+
 
 @media (max-width: 641px){
   .place-card .card-img{
