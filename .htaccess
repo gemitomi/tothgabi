@@ -9,6 +9,6 @@ RewriteRule . /index.html [L]
 </IfModule>
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP:X-Forwarded-SSL} !on
-RewriteCond %{HTTP_HOST} ^cybernews\.hu$ [OR]
-RewriteCond %{HTTP_HOST} ^www\.cybernews\.hu$
-RewriteRule ^/?$ "https\:\/\/cybernews\.hu\/" [R=301,L]
+RewriteCond %{HTTP_HOST} ^gabriellatoth\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.gabriellatoth\.com$
+RewriteRule ^/?$ "https\:\/\/gabriellatoth\.com\/" [R=301,L]
