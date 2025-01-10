@@ -92,7 +92,7 @@ const AnimatedSection = () => {
                 <p class="body-4 hero-text pre-wrap-text">Szenvedéllyel és elkötelezettséggel végzem mindennapi munkámat a családok segítéséért és támogatásáért. Fontosnak tartom a folyamatos szakmai fejlődést, ennek érdekében 2023 őszén pszichológiai tanulmányaimat is elkezdtem. Célom, hogy szakértelmemet és empátiámat összehangolva támogassam azokat, akik életük különböző szakaszaiban találják magukat.</p>       
                 {/* Gomb animáció */}
       <div ref={btnWrapperRef} className="btn-wrapper">
-        <a href="#" className="btnlink" target="_blank" rel="noopener noreferrer">
+        <a href="/contact" className="btnlink" target="_blank" rel="noopener noreferrer">
           <div className="orange"></div>
           <span>Kérjen időpontot</span>
           <i className="fa-solid fa-arrow-right"></i>

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-top grid-list">
           <div className="footer-bottom">
             <p className="copyright">
-            &copy; 2024 gabriellatoth| All Rights Reserved | by <a href="#" target="_blank" className="link">Webrabbit | Adatkezelési tájékoztató</a> 
+            &copy; 2024 gabriellatoth| All Rights Reserved | by <a href="https://webrabbit.hu" target="_blank" className="link">Webrabbit</a> | Adatkezelési tájékoztató 
             </p>
           </div>
         </div>

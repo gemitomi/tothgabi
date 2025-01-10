@@ -209,6 +209,7 @@ import AskHelp from "../image/segitseg-keres.jpg"
                         90 perc
                         /alkalom
                       </p> 
+                      <p><br/></p>
                     </div>
                   </div>
       
@@ -245,6 +246,14 @@ import AskHelp from "../image/segitseg-keres.jpg"
                             <path d="m4 12 8 8L28 4"></path>
                           </svg>
                         </span>
+                          Online
+                      </p>
+                      <p className="flex items-center body-4 mb-2">
+                        <span className="online">
+                          <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
+                            <path d="m4 12 8 8L28 4"></path>
+                          </svg>
+                        </span>
                           90 perc
                           /alkalom
                       </p>
@@ -264,7 +273,7 @@ import AskHelp from "../image/segitseg-keres.jpg"
                           <h1 className="price-1 flex">
                           <span className="body-1 green">20.000 Ft </span>
                           <span className="body-3 grau">/alkalom </span>
-                          <span className="body-3 grau">/ 90 perc </span>
+                          
                           </h1>
                     </div>
                     <hr/>

@@ -4,7 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 
 import Platina from "../image/Platina.jpg"
-import Place02 from "../image/helyszin-2.png"
+// import Place02 from "../image/helyszin-2.png"
 import Place03 from "../image/helyszin-3.png"
 import "../CSS/helyszinek.css"
 
@@ -94,12 +94,12 @@ gsap.registerPlugin(ScrollTrigger);
                         </svg>
                       </div>
                         <div className="cont-text">
-                              <a href="http://mozaikcsalad.hu" className="body-4">http://mozaikcsalad.hu</a>
+                              <a href="http://mozaikcsaladkozpont.hu" className="body-4">http://mozaikcsaladkozpont.hu</a>
                         </div>
                     </div>
                   </div>
                   <div ref={btnWrapperRef} className="btn-wrapper">
-                    <a href="#" className="btnlink" target="_blank" rel="noopener noreferrer">
+                    <a href="/contact" className="btnlink" target="_blank" rel="noopener noreferrer">
                       <div className="orange"></div>
                       <span>Kérjen időpontot</span>
                       <i className="fa-solid fa-arrow-right"></i>
@@ -133,7 +133,7 @@ gsap.registerPlugin(ScrollTrigger);
                   </div>
 
                       <div ref={btnWrapperRef2} className="btn-wrapper">
-                        <a href="#" className="btnlink" target="_blank" rel="noopener noreferrer">
+                        <a href="/contact" className="btnlink" target="_blank" rel="noopener noreferrer">
                           <div className="orange"></div>
                           <span>Kérjen időpontot</span>
                           <i className="fa-solid fa-arrow-right"></i>
