@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
         $mailheader .= 'Content-type: text/html; charset=utf-8' . "\r\n";
         $mailheader .= "From: " . $name . " <" . $email . ">\r\n";
 
-        $recipient = "info@webrabbit.hu";
+        $recipient = "ggabriella.toth@gmail.com";
 
         // Email küldése
         if (mail($recipient, $subject, $body, $mailheader)) {
@@ -47,7 +47,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
                     <p>Hamarosan felveszem a kapcsolatot Önnel.</p> <br>
                     <p>Kérem erre az üzenetre ne válaszoljon.</p> <br>
                    
-                    <p>Üdvözlettel: <br><br>
+                    <p>Üdvözlettel: <br>
+                    <br>
+                    <p>Tóth Gabriella</p>
+                    <p></p>
                    </p>
                 </body>
             </html>
@@ -85,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['send'])) {
         function showMessage() {
             var message = "<?php echo $messageBox; ?>";
             if (message) {
-                window.location.href = "https://www.cybernews.hu";
+                window.location.href = "https://www.gabriellatoth.com";
             }
         }
     </script>

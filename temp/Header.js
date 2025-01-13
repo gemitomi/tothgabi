@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { throttle } from "lodash";
 import ProfilePic01 from "../image/Toth Gabriella_2.svg";
 import "../CSS/style.css";
 
@@ -31,11 +30,8 @@ export default function Header() {
 
   // Görgetés eseménykezelése
   useEffect(() => {
-    const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-    if (isIOS) return; // Ha iOS, akkor ne indítsuk el a görgetés figyelését
-
-    const handleScroll = throttle(() => {
-      const currentScrollPos = -document.body.getBoundingClientRect().top;
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
 
       // Fejléc elrejtése, ha lefelé görgetsz
       if (currentScrollPos > lastScrollPos.current) {
@@ -54,7 +50,7 @@ export default function Header() {
       }
 
       lastScrollPos.current = currentScrollPos; // Frissítsd az utolsó pozíciót
-    }, 200);
+    };
 
     // Görgetés figyelése
     window.addEventListener("scroll", handleScroll);
