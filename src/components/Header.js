@@ -95,7 +95,7 @@ export default function Header() {
 
           <div className="separator"></div>
 
-          <Link to="mailto:info@gabriellatoth.com" className="topbar-item link">
+          <Link to="mailto:ggabriella.toth@gmail.com" className="topbar-item link">
             <div className="icon">
               <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </div>
@@ -175,10 +175,10 @@ export default function Header() {
               </address>
               <div className="separator"></div>
               <a
-                href="mailto:info@tothgabriella.hu.com"
+                href="mailto:ggabriella.toth@gmail.com"
                 className="body-4 sidebar-link"
               >
-                info@tothgabriella.hu
+                ggabriella.toth@gmail.com
               </a>
               <div className="separator"></div>
               <p className="contact-label">Mobil</p>

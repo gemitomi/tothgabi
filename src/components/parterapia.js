@@ -248,7 +248,7 @@ export default function parterapia() {
                   </div>
                   <div className="the-price">
                     <h1 className="price-1 flex">
-                    <span className="body-1 green">23.000 Ft </span>
+                    <span className="body-1 green">25.000 Ft </span>
                     <span className="body-3 grau">/alkalom </span>
                     </h1>
                   </div>
@@ -289,7 +289,7 @@ export default function parterapia() {
                   </div>
                   <div className="the-price">
                     <h1 className="price-1 flex">
-                      <span className="body-1 green">32.000 Ft </span>
+                      <span className="body-1 green">34.000 Ft </span>
                       <span className="body-3 grau">/alkalom</span>
                     </h1>
                   </div>
@@ -336,7 +336,7 @@ export default function parterapia() {
                   </div>
                   <div className="the-price">
                     <h1 className="price-1 flex">
-                    <span className="body-1 green">20.000 Ft </span>
+                    <span className="body-1 green">22.000 Ft </span>
                     <span className="body-3 grau">/alkalom </span>
                     </h1>
                   </div>
@@ -369,7 +369,97 @@ export default function parterapia() {
                     </p>
 
                   </div>
-            </div>
+                  
+                </div>
+
+                <div id="price-online" className="price-card">
+                  <div className="plan-details">
+                    <div className="plan-name">
+                    <h2>
+                    <strong>PÁRTERÁPIA</strong>
+                    </h2>
+                    </div>
+                    <p className="plan-save">EGYÉNI VEZETÉSSEL</p>
+                  </div>
+                  <div className="the-price">
+                    <h1 className="price-1 flex">
+                    <span className="body-1 green">18.000 Ft </span>
+                    <span className="body-3 grau">/alkalom </span>
+                    </h1>
+                  </div>
+                  <hr/>
+                  <div className="the-details">
+                    
+                    <p className="flex items-center body-4 mb-2">
+                    <span className="online">
+                    <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
+                          <path d="m4 12 8 8L28 4"></path>
+                    </svg>
+                    </span>
+                    Személyesen (&nbsp;
+                        <Link to="https://www.google.com/maps/place/Budapest,+Platina+u.+1,+1223/@47.4122232,19.0214719,17z/data=!3m1!4b1!4m6!3m5!1s0x4741e7a87f3240c7:0xcda504e38038b15e!8m2!3d47.4122196!4d19.0240468!16s%2Fg%2F11csj4sx99?entry=ttu" className="underline text-underline" target="_blank">helyszínek</Link>
+                          &nbsp;)
+                    </p>
+                    <p className="flex items-center body-4 mb-2">
+                    <span className="online">
+                    <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
+                          <path d="m4 12 8 8L28 4"></path>
+                    </svg>
+                    </span>
+                    60 perc
+                    /alkalom
+                    </p>
+                  <p><br/></p>
+                  </div>
+                  </div>
+                    <div id="price-online" className="price-card">
+                      <div className="plan-details">
+                            <div className="plan-name">
+                            <h2>
+                            <strong>PÁRTERÁPIA</strong>
+                            </h2>
+                            </div>
+                            <p className="plan-save">ONLINE</p>
+                      </div>
+                      <div className="the-price">
+                            <h1 className="price-1 flex">
+                            <span className="body-1 green">16.000 Ft </span>
+                            <span className="body-3 grau">/alkalom </span>
+                            
+                            </h1>
+                      </div>
+                      <hr/>
+                    <div className="the-details">
+                      <p className="flex items-center body-4 mb-2">
+                      <span className="online">
+                      <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
+                            <path d="m4 12 8 8L28 4"></path>
+                      </svg>
+                      </span>
+                      Online (Google Meet, Zoom)
+                      </p>
+                      <p className="flex items-center body-4 mb-2">
+                      <span className="online">
+                      <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
+                            <path d="m4 12 8 8L28 4"></path>
+                      </svg>
+                      </span>
+                      Egyéni vezetéssel
+                      </p>
+                      <p className="flex items-center body-4 mb-2">
+                      <span className="online">
+                      <svg fill="none" stroke="#708d7d" stroke-linejoin="round" stroke-linecap="round" xmlns="http://www.w3.org/2000svg" viewBox="0 0 32 24">
+                            <path d="m4 12 8 8L28 4"></path>
+                      </svg>
+                      </span>
+                      60 perc
+                      /alkalom
+                      </p>
+  
+                    
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
